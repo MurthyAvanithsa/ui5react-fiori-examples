@@ -3,12 +3,11 @@ import {
   SideNavigationItem,
   SideNavigationSubItem,
 } from "@ui5/webcomponents-react";
-import React, { useState } from "react";
+import React from "react";
 
 export const AppSideNavigation = (props) => {
   return (
     <SideNavigation
-      // collapsed={expand}
       className=""
       onSelectionChange={function noRefCheck() {}}
       slot=""

@@ -1,8 +1,15 @@
-import { Form, FormItem, Icon, Input } from "@ui5/webcomponents-react";
+import { Button, Form, FormItem, Icon, Input } from "@ui5/webcomponents-react";
 
 export const WCHeader = (props) => {
   return (
-    <Form style={{ width: "500px" }}>
+    <Form
+      columnsM
+      style={{
+        alignItems: "flex-end",
+        display: "flex",
+        flexWrap: "wrap",
+      }}
+    >
       <div>
         <FormItem label="Layout">
           <Input icon={<Icon name="search" />} />
@@ -34,6 +41,11 @@ export const WCHeader = (props) => {
         <FormItem label="Selection Date">
           <Input icon={<Icon name="appointment" />} />
         </FormItem>
+      </div>
+      <div>
+        <Button key="go" design="Emphasized">
+          Go
+        </Button>
       </div>
     </Form>
   );

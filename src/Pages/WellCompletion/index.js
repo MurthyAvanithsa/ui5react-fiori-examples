@@ -3,7 +3,6 @@ import {
   DynamicPage,
   DynamicPageHeader,
   DynamicPageTitle,
-  FlexBox,
   VariantManagement,
 } from "@ui5/webcomponents-react";
 import React, { useRef } from "react";
@@ -18,7 +17,7 @@ export const WellCompletion = () => {
     dialogRef.current.open();
   };
   return (
-    <FlexBox style={{ width: "100%", height: "100vh" }}>
+    <div class="sapUiResponsiveMargin" width="auto">
       <DynamicPage
         header={
           <DynamicPageHeader>
@@ -53,15 +52,12 @@ export const WellCompletion = () => {
             navigationActions={[
               <Button key="decline" design="Transparent" icon="decline" />,
             ]}
-            // subHeading={<Label>This is a subheading</Label>}
-          >
-            {/* <Badge>Status: OK</Badge> */}
-          </DynamicPageTitle>
+          />
         }
       >
-        <WellCompletionTable></WellCompletionTable>
-        <WCValueHelperDialog dialogRef={dialogRef}></WCValueHelperDialog>
+        <WellCompletionTable />
+        <WCValueHelperDialog dialogRef={dialogRef} />
       </DynamicPage>
-    </FlexBox>
+    </div>
   );
 };

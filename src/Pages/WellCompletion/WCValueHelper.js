@@ -1,4 +1,3 @@
-import { render } from "@testing-library/react";
 import {
   Bar,
   Button,
@@ -20,11 +19,9 @@ import {
   Title,
   VariantManagement,
 } from "@ui5/webcomponents-react";
-import React, { useRef } from "react";
+import React from "react";
 
 export const WCValueHelperDialog = (props) => {
-  //   const dialogRef = useRef(null);
-
   const handleClose = () => {
     props.dialogRef.current.close();
   };
@@ -53,7 +50,7 @@ export const WCValueHelperDialog = (props) => {
         }}
         tooltip=""
       >
-        <Tab icon="search" selected text="Search and Select">
+        <Tab selected text="Search and Select">
           <FilterBar
             filterContainerWidth="13.125rem"
             search={<Input placeholder="Search" />}
@@ -244,9 +241,7 @@ export const WCValueHelperDialog = (props) => {
             <MultiComboBoxItem text="Item 5" />
           </MultiComboBox>
         </Tab>
-        <Tab icon="filter" text="Define Conditions">
-          Content Tab 2
-        </Tab>
+        <Tab text="Define Conditions">Content Tab 2</Tab>
       </TabContainer>
     </Dialog>
   );
