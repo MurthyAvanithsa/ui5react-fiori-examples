@@ -2,7 +2,7 @@ import { Form, FormItem, Icon, Input } from "@ui5/webcomponents-react";
 
 export const WCHeader = (props) => {
   return (
-    <Form>
+    <Form style={{ width: "500px" }}>
       <div>
         <FormItem label="Layout">
           <Input icon={<Icon name="search" />} />
