@@ -5,13 +5,7 @@ import {
 } from "@ui5/webcomponents-react";
 import React, { useState } from "react";
 
-export const AppSideNavigation = () => {
-  const [expand, setExpand] = useState(true);
-
-  const handleClick = (event) => {
-    setExpand((prevExpand) => !prevExpand);
-  };
-
+export const AppSideNavigation = (props) => {
   return (
     <SideNavigation
       // collapsed={expand}
@@ -20,6 +14,7 @@ export const AppSideNavigation = () => {
       slot=""
       style={{}}
       tooltip=""
+      collapsed={props.collapsed}
     >
       <SideNavigationItem icon="home" text="Home" />
       <SideNavigationItem icon="bbyd-dashboard" text="DashBoard" />

@@ -4,17 +4,14 @@ import {
   DynamicPageHeader,
   DynamicPageTitle,
   FlexBox,
-  Form,
-  FormItem,
-  Icon,
-  Input,
   VariantManagement,
 } from "@ui5/webcomponents-react";
 import React, { useRef } from "react";
 
+import { WCHeader } from "./WCHeader";
 import { WellCompletionTable } from "./WCResults";
 import { WCValueHelperDialog } from "./WCValueHelper";
-import { WCHeader } from "./WCHeader";
+
 export const WellCompletion = () => {
   const dialogRef = useRef(null);
   const handleOpen = (e) => {
@@ -43,16 +40,6 @@ export const WellCompletion = () => {
                 Delete
               </Button>,
             ]}
-            // breadcrumbs={
-            //   <Breadcrumbs>
-            //     <Link>Home</Link>
-            //     <Link>Page 1</Link>
-            //     <Link>Page 2</Link>
-            //     <Link>Page 3</Link>
-            //     <Link>Page 4</Link>
-            //     <Link>Page 5</Link>
-            //   </Breadcrumbs>
-            // }
             heading={
               <VariantManagement
                 onSelect={function noRefCheck() {}}
@@ -73,7 +60,7 @@ export const WellCompletion = () => {
         }
       >
         <WellCompletionTable></WellCompletionTable>
-        <WCValueHelperDialog dialogRef={dialogRef}></WCValueHelperDialog>
+        {/* <WCValueHelperDialog dialogRef={dialogRef}></WCValueHelperDialog> */}
       </DynamicPage>
     </FlexBox>
   );

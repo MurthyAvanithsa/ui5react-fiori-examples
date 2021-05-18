@@ -8,15 +8,20 @@ import { AppSideNavigation } from "./AppSideNavigation";
 import { WellCompletion } from "./Pages/WellCompletion";
 
 function App() {
+  const [expand, setExpand] = React.useState(true);
+
+  const handleClick = (event) => {
+    setExpand((prevExpand) => !prevExpand);
+  };
   return (
     <ThemeProvider>
-      <AppShellBar />
+      <AppShellBar onMenuClick={handleClick} />
       <FlexBox
         style={{ width: "100%", height: "100vh" }}
         // direction={FlexBoxDirection.Column}
         // justifyContent={FlexBoxJustifyContent.Center}
       >
-        <AppSideNavigation />
+        <AppSideNavigation collapsed={expand} />
         <BrowserRouter>
           <Switch>
             <Route path="/home" component={Home} />
