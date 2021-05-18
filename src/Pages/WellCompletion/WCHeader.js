@@ -6,7 +6,7 @@ export const WCHeader = (props) => {
       columnsM
       style={{
         alignItems: "flex-end",
-        display: "flex",
+        // display: "flex",
         flexWrap: "wrap",
       }}
     >
