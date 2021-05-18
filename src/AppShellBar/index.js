@@ -1,4 +1,4 @@
-import { ShellBar, ShellBarItem } from "@ui5/webcomponents-react";
+import { Button, ShellBar, ShellBarItem } from "@ui5/webcomponents-react";
 
 import Logo from "../brandicon.png";
 
@@ -19,9 +19,7 @@ export const AppShellBar = (props) => {
         }
         primaryTitle={"Production"}
         secondaryTitle={"Well Completion"}
-        startButton={
-          <ui5-button icon="paging" onClick={props.onMenuClick}></ui5-button>
-        }
+        startButton={<Button icon="paging" onClick={props.onMenuClick} />}
       >
         <ShellBarItem icon="employee" text="Profile" />
       </ShellBar>

@@ -1,6 +1,20 @@
-import { Button, Form, FormItem, Icon, Input } from "@ui5/webcomponents-react";
+import {
+  BusyIndicator,
+  Button,
+  Form,
+  FormItem,
+  Icon,
+  Input,
+} from "@ui5/webcomponents-react";
+import { useState } from "react";
 
 export const WCHeader = (props) => {
+  const [active, setActive] = useState(false);
+
+  const handleSearchClick = () => {
+    setActive(true);
+  };
+
   return (
     <Form
       columnsM
@@ -12,7 +26,15 @@ export const WCHeader = (props) => {
     >
       <div>
         <FormItem label="Layout">
-          <Input icon={<Icon name="search" />} />
+          <BusyIndicator
+            active={active}
+            className=""
+            slot=""
+            style={{}}
+            tooltip=""
+          >
+            <Input icon={<Icon name="search" onClick={handleSearchClick} />} />
+          </BusyIndicator>
         </FormItem>
       </div>
       <div>
