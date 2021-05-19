@@ -35,12 +35,7 @@ export const WCValueHelperDialog = (props) => {
       style={{ zIndex: 9999 }}
       className=""
       footer={<Bar endContent={<Button onClick={handleClose}>Close</Button>} />}
-      header={
-        <Bar
-          endContent={<Icon name="settings" />}
-          middleContent={<Title>Well Completion</Title>}
-        />
-      }
+      header={<Bar startContent={<Title>Well Completion</Title>} />}
       headerText="Dialog Header"
     >
       <TabContainer
@@ -55,6 +50,7 @@ export const WCValueHelperDialog = (props) => {
       >
         <Tab selected text="Search and Select">
           <FilterBar
+            showGoOnFB
             filterContainerWidth="13.125rem"
             search={<Input placeholder="Search" />}
             showFilterConfiguration

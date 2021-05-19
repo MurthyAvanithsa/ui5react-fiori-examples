@@ -17,10 +17,9 @@ export const WCHeader = (props) => {
 
   return (
     <Form
-      columnsM
       style={{
         alignItems: "flex-end",
-        // display: "flex",
+        display: "flex",
         flexWrap: "wrap",
       }}
     >
@@ -60,11 +59,28 @@ export const WCHeader = (props) => {
         </FormItem>
       </div>
       <div>
+        <FormItem label="WC Name">
+          <Input icon={<Icon name="value-help" />} />
+        </FormItem>
+      </div>
+      <div>
+        <FormItem label="WC Name">
+          <Input icon={<Icon name="value-help" />} />
+        </FormItem>
+      </div>
+      <div>
+        <FormItem label="WC Name">
+          <Input icon={<Icon name="value-help" />} />
+        </FormItem>
+      </div>
+      <div>
         <FormItem label="Selection Date">
           <Input icon={<Icon name="appointment" />} />
         </FormItem>
       </div>
-      <div>
+      <div
+        style={{ marginTop: "17px", display: "flex", alignItems: "flex-end" }}
+      >
         <Button key="go" design="Emphasized">
           Go
         </Button>

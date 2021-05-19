@@ -1,5 +1,4 @@
 import { FlexBox, ThemeProvider } from "@ui5/webcomponents-react";
-import { spacing } from "@ui5/webcomponents-react-base";
 import React from "react";
 import "./App.css";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
@@ -17,7 +16,7 @@ function App() {
   return (
     <ThemeProvider>
       <AppShellBar onMenuClick={handleClick} />
-      <FlexBox style={spacing.sapUiContentPadding}>
+      <FlexBox>
         <AppSideNavigation collapsed={expand} />
         <BrowserRouter>
           <Switch>
