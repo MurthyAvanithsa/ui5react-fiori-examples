@@ -53,7 +53,7 @@ export const WCValueHelperDialog = (props) => {
             showGoOnFB
             filterContainerWidth="13.125rem"
             search={<Input placeholder="Search" />}
-            showFilterConfiguration
+            showFilterConfiguration={false}
             variants={
               <VariantManagement
                 selectedKey="2"
