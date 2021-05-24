@@ -120,6 +120,7 @@ export const WellCompletion = () => {
           </Form> */}
 
           <FilterBar
+            style={{ maxHeight: "500px" }}
             showGoOnFB
             filterContainerWidth="13.125rem"
             search={<Input placeholder="Search" />}
@@ -208,7 +209,7 @@ export const WellCompletion = () => {
         </DynamicPageHeader>
       }
       style={{
-        maxHeight: "700px",
+        maxHeight: "calc(100vh-44px)",
       }}
     >
       <WellCompletionTable />

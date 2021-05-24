@@ -15,7 +15,7 @@ function App() {
   return (
     <ThemeProvider>
       <AppShellBar onMenuClick={handleClick} />
-      <div style={{ display: "flex", height: "100%" }}>
+      <div style={{ display: "flex", height: "calc(100vh-44px)" }}>
         <AppSideNavigation collapsed={expand} />
         <BrowserRouter>
           <Switch>
