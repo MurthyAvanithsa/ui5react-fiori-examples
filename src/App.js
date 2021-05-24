@@ -1,6 +1,5 @@
-import { FlexBox, ThemeProvider } from "@ui5/webcomponents-react";
+import { ThemeProvider } from "@ui5/webcomponents-react";
 import React from "react";
-import "./App.css";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { AppShellBar } from "./AppShellBar";
 import { Home } from "./Pages/Home";
@@ -16,17 +15,16 @@ function App() {
   return (
     <ThemeProvider>
       <AppShellBar onMenuClick={handleClick} />
-      <FlexBox>
+      <div style={{ display: "flex", height: "100%" }}>
         <AppSideNavigation collapsed={expand} />
         <BrowserRouter>
           <Switch>
             <Route path="/home" component={Home} />
             <Route path="/well-completion" component={WellCompletion} />
-            {/* <Route path="/detail" component={Detail} /> */}
             <Redirect from="/" to="/well-completion" />
           </Switch>
         </BrowserRouter>
-      </FlexBox>
+      </div>
     </ThemeProvider>
   );
 }
