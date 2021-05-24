@@ -8,7 +8,7 @@ import { AppSideNavigation } from "./AppSideNavigation";
 import { WellCompletion } from "./Pages/WellCompletion";
 
 function App() {
-  const [expand, setExpand] = React.useState(true);
+  const [expand, setExpand] = React.useState(false);
 
   const handleClick = (event) => {
     setExpand((prevExpand) => !prevExpand);

@@ -29,10 +29,11 @@ export const WellCompletion = () => {
       title={
         <DynamicPageTitle
           actions={[
-            <Button key="add" design="Transparent" icon="add" />,
-            <Button key="copy" design="Transparent" icon="copy" />,
-            <Button key="edit" design="Emphasized">
-              Edit
+            <Button key="add" design="Emphasized">
+              Add{" "}
+            </Button>,
+            <Button key="copy" design="Transparent">
+              Copy
             </Button>,
             <Button key="delete" design="Transparent">
               Delete
@@ -49,7 +50,7 @@ export const WellCompletion = () => {
             />
           }
           navigationActions={[
-            <Button key="decline" design="Transparent" icon="decline" />,
+            <Button key="decline" design="Transparent" icon="print" />,
           ]}
         />
       }
