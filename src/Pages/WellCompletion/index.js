@@ -52,7 +52,7 @@ export const WellCompletion = () => {
         </DynamicPageHeader>
       }
       style={{
-        maxHeight: "calc(100vh-44px)",
+        maxHeight: "calc(100vh - 44px)",
       }}
     >
       <WellCompletionTable />

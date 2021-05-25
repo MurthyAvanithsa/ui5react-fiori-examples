@@ -11,8 +11,14 @@ import {
   ToolbarSpacer,
 } from "@ui5/webcomponents-react";
 import React from "react";
+import { useHistory } from "react-router";
 
 export const WellCompletionTable = () => {
+  let history = useHistory();
+
+  const openDetailsScreen = () => {
+    history.push("/well-completion/details");
+  };
   return (
     <div>
       <Toolbar
@@ -36,6 +42,7 @@ export const WellCompletionTable = () => {
         }}
       >
         <Table
+          onRowClick={openDetailsScreen}
           className=""
           columns={
             <>

@@ -19,7 +19,6 @@ import {
   TableRow,
   Title,
   Token,
-  VariantManagement,
 } from "@ui5/webcomponents-react";
 import React from "react";
 import { Grid } from "@material-ui/core";
@@ -53,17 +52,7 @@ export const WCValueHelperDialog = (props) => {
           <FilterBar
             useToolbar={false}
             filterContainerWidth="13.125rem"
-            // search={<Input placeholder="Search" />}
             showFilterConfiguration={false}
-            // variants={
-            //   <VariantManagement
-            //     selectedKey="2"
-            //     variantItems={[
-            //       { key: "1", label: "Variant 1" },
-            //       { key: "2", label: "Variant 2" },
-            //     ]}
-            //   />
-            // }
           >
             <FilterGroupItem label="Well Number">
               <Input icon={<Icon name="value-help" />} placeholder="" />
