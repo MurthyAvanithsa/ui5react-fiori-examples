@@ -51,19 +51,19 @@ export const WCValueHelperDialog = (props) => {
       >
         <Tab selected text="Search and Select">
           <FilterBar
-            showGoOnFB
+            useToolbar={false}
             filterContainerWidth="13.125rem"
-            search={<Input placeholder="Search" />}
+            // search={<Input placeholder="Search" />}
             showFilterConfiguration={false}
-            variants={
-              <VariantManagement
-                selectedKey="2"
-                variantItems={[
-                  { key: "1", label: "Variant 1" },
-                  { key: "2", label: "Variant 2" },
-                ]}
-              />
-            }
+            // variants={
+            //   <VariantManagement
+            //     selectedKey="2"
+            //     variantItems={[
+            //       { key: "1", label: "Variant 1" },
+            //       { key: "2", label: "Variant 2" },
+            //     ]}
+            //   />
+            // }
           >
             <FilterGroupItem label="Well Number">
               <Input icon={<Icon name="value-help" />} placeholder="" />
@@ -82,6 +82,15 @@ export const WCValueHelperDialog = (props) => {
             </FilterGroupItem>
             <FilterGroupItem label="WC Type">
               <Input icon={<Icon name="value-help" />} placeholder="" />
+            </FilterGroupItem>
+            <FilterGroupItem label="">
+              <CheckBox
+                className=""
+                onChange={function noRefCheck() {}}
+                slot=""
+                text="Operated"
+                tooltip=""
+              />
             </FilterGroupItem>
           </FilterBar>
           <Grid container justify="space-between" style={{ height: "90%" }}>
