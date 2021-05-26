@@ -8,7 +8,7 @@ import { WellCompletion } from "./Pages/WellCompletion";
 import { Details } from "./Pages/WellCompletion/Details";
 
 function App() {
-  const [expand, setExpand] = React.useState(false);
+  const [expand, setExpand] = React.useState(true);
 
   const handleClick = (event) => {
     setExpand((prevExpand) => !prevExpand);

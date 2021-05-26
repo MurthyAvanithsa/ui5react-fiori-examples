@@ -22,7 +22,7 @@ export const WellCompletion = () => {
         <DynamicPageTitle
           actions={[
             <Button key="add" design="Emphasized">
-              Add{" "}
+              Add
             </Button>,
             <Button key="copy" design="Transparent">
               Copy
