@@ -195,7 +195,7 @@ export const WellCompletionTable = (props) => {
         <Button key="delete" design="Transparent">
           Delete
         </Button>
-        <Button key="settings" design="Transparent" icon="settings" />,
+        <Button key="settings" design="Transparent" icon="action-settings" />,
       </Toolbar>
       <AgGridReact
         // rowHeight={50}
