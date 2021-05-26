@@ -21,14 +21,9 @@ export const WellCompletion = () => {
       title={
         <DynamicPageTitle
           actions={[
-            <Button key="add" design="Emphasized">
-              Add
-            </Button>,
+            <Button key="add">Create</Button>,
             <Button key="copy" design="Transparent">
               Copy
-            </Button>,
-            <Button key="delete" design="Transparent">
-              Delete
             </Button>,
           ]}
           heading={
@@ -51,12 +46,19 @@ export const WellCompletion = () => {
           <WCHeader handleValueHelp={handleOpen} />
         </DynamicPageHeader>
       }
-      style={{
-        maxHeight: "calc(100vh - 44px)",
-      }}
+      style={
+        {
+          // maxHeight: "calc(100vh - 44px)",
+        }
+      }
     >
-      <WellCompletionTable />
-      <WCValueHelperDialog dialogRef={dialogRef} />
+      <div
+        className="ag-theme-balham"
+        style={{ height: "calc(100vh - 113px)" }}
+      >
+        <WellCompletionTable />
+      </div>
+      {/* <WCValueHelperDialog dialogRef={dialogRef} /> */}
     </DynamicPage>
   );
 };
