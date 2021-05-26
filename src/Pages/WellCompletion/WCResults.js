@@ -18,30 +18,46 @@ export const WellCompletionTable = (props) => {
   const [columnApi, setColumnApi] = useState(null);
   const [rowData, setRowData] = useState(null);
 
+  React.useEffect(() => {
+    if (columnApi !== null) {
+      var allColumnIds = [];
+      columnApi.getAllColumns().forEach(function (column) {
+        allColumnIds.push(column.colId);
+      });
+      columnApi.autoSizeColumns(allColumnIds, false);
+      // api.sizeColumnsToFit();
+    }
+  }, [columnApi, api]);
+
   function onGridReady(params) {
     setApi(params.api);
     setColumnApi(params.columnApi);
-    var allColumnIds = [];
-    columnApi?.getAllColumns().forEach(function (column) {
-      allColumnIds.push(column.colId);
-    });
     // api?.sizeColumnsToFit();
-
-    columnApi?.autoSizeColumns(allColumnIds, true);
     setRowData(
       [...Array(100).keys()].map((value) => {
         return {
-          property: "123",
-          doi: "t1001",
-          doi_name: "OW",
-          state: "YES",
-          county: "12",
-          doi_xref1: "YES",
-          doi_xref2: "100",
-          effective_from: "12/09/21",
-          effective_to: "11/10/21",
-          major_product: "Google",
-          primary_doi: "23",
+          well_number: `WELL${value + 1000}`,
+          well_completion: "t1001",
+          api_well_number: "OW",
+          api_wc_number: "YES",
+          wc_type: "12",
+          county: "YES",
+          wc_xref1: "100",
+          wc_xref2: "12/09/21",
+          well_class: "11/10/21",
+          rep_well_count: "Google",
+          Operated: "23",
+          shl_longitude: "10012.21",
+          shl_latitude: "10012.21",
+          operator: "Oildex",
+          company: "C10001",
+          company_name: "NewYork",
+          cost_center: "CT1001",
+          velocity: "122.1",
+          fluid_volume: "144.1",
+          isothermal: "12.12",
+          viscocity: "2.7",
+          pressure: "2223",
         };
       })
     );
@@ -49,25 +65,30 @@ export const WellCompletionTable = (props) => {
 
   const columns = [
     {
-      headerName: "Property",
+      headerName: "Well Number",
       headerCheckboxSelection: true,
       checkboxSelection: true,
-      field: "property",
+      field: "well_number",
       resizable: true,
     },
     {
-      headerName: "DOI",
-      field: "doi",
+      headerName: "Well Completion",
+      field: "well_completion",
       resizable: true,
     },
     {
-      headerName: "DOI Name",
-      field: "doi_name",
+      headerName: "API WellNo",
+      field: "api_well_number",
       resizable: true,
     },
     {
-      headerName: "State",
-      field: "state",
+      headerName: "API WC No",
+      field: "api_wc_number",
+      resizable: true,
+    },
+    {
+      headerName: "WC Type",
+      field: "wc_type",
       resizable: true,
     },
     {
@@ -76,33 +97,84 @@ export const WellCompletionTable = (props) => {
       resizable: true,
     },
     {
-      headerName: "DOI XRef1",
-      field: "doi_xref1",
+      headerName: "SHL Longitude",
+      field: "shl_longitude",
       resizable: true,
     },
     {
-      headerName: "DOI XRef2",
-      field: "doi_xref2",
+      headerName: "SHL Latitude",
+      field: "shl_latitude",
       resizable: true,
     },
     {
-      headerName: "Effective From",
-      field: "effective_from",
+      headerName: "WC XRef1",
+      field: "wc_xref1",
       resizable: true,
     },
     {
-      headerName: "Effective To",
-      field: "effective_to",
+      headerName: "WC XRef2",
+      field: "wc_xref2",
       resizable: true,
     },
     {
-      headerName: "Major Product",
-      field: "major_product",
+      headerName: "Well Class",
+      field: "well_class",
       resizable: true,
     },
     {
-      headerName: "Primary DOI",
-      field: "primary_doi",
+      headerName: "Rep Well Count",
+      field: "rep_well_count",
+      resizable: true,
+    },
+    {
+      headerName: "Operated",
+      field: "operated",
+      resizable: true,
+    },
+    {
+      headerName: "Operator",
+      field: "operator",
+      resizable: true,
+    },
+    {
+      headerName: "Company",
+      field: "company",
+      resizable: true,
+    },
+    {
+      headerName: "Company Name",
+      field: "company_name",
+      resizable: true,
+    },
+    {
+      headerName: "Cost Center",
+      field: "cost_center",
+      resizable: true,
+    },
+
+    {
+      headerName: "Viscocity",
+      field: "viscocity",
+      resizable: true,
+    },
+    {
+      headerName: "Isothermal compressibility",
+      field: "isothermal",
+      resizable: true,
+    },
+    {
+      headerName: "Velocity",
+      field: "velocity",
+      resizable: true,
+    },
+    {
+      headerName: "Fluid volume",
+      field: "fluid_volume",
+      resizable: true,
+    },
+    {
+      headerName: "Pressure",
+      field: "pressure",
       resizable: true,
     },
   ];
