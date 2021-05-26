@@ -12,40 +12,56 @@ import {
 
 export const DetailForm = () => {
   return (
-    <div>
-      <Form title="">
-        <FormGroup>
-          <FormItem label="Well Completion">
-            <Input />
-          </FormItem>
-          <FormItem label={<Label>API Well Number</Label>}>
-            <Input />
-          </FormItem>
-          <FormItem label="Well Completion">
-            <Input />
-          </FormItem>
-          <FormItem label={<Label>API Well Number</Label>}>
-            <Input />
-          </FormItem>
-          <FormItem label="WC Type">
-            <Input />
-          </FormItem>
-          <FormItem
-            label="County
+    <div style={{ height: "100vh", overflow: "scroll" }}>
+      <Form>
+        <FormItem label="Well Completion">
+          <Input />
+        </FormItem>
+        <FormItem label={<Label>API Well Number</Label>}>
+          <Input />
+        </FormItem>
+        <FormItem label="Well Completion">
+          <Input />
+        </FormItem>
+        <FormItem label={<Label>API Well Number</Label>}>
+          <Input />
+        </FormItem>
+        <FormItem label="WC Type">
+          <Input />
+        </FormItem>
+        <FormItem
+          label="County
 "
-          >
+        >
+          <Input />
+        </FormItem>
+        <FormItem label="SHL Latitude">
+          <Input />
+        </FormItem>
+        <FormItem label="BHL Longitude">
+          <Input />
+        </FormItem>
+        <FormItem label="WC Xref1">
+          <Input />
+        </FormItem>
+        <FormItem label="WC Xref2">
+          <Input />
+        </FormItem>
+        <FormGroup title="GRP1">
+          <FormItem label="Velocity">
             <Input />
           </FormItem>
-          <FormItem label="SHL Latitude">
+          <FormItem label="Fluid Volume">
             <Input />
           </FormItem>
-          <FormItem label="BHL Longitude">
+        </FormGroup>
+        <FormGroup title="GRP2">
+          <FormItem label="Velocity">
             <Input />
           </FormItem>
-          <FormItem label="WC Xref1">
-            <Input />
-          </FormItem>
-          <FormItem label="WC Xref2">
+        </FormGroup>
+        <FormGroup title="GRP3">
+          <FormItem label="Fluid Volume">
             <Input />
           </FormItem>
         </FormGroup>
