@@ -101,7 +101,7 @@ export const PropertyTable = (props) => {
     <div
       className="ag-theme-balham"
       style={{
-        height: "100%",
+        height: "90%",
         width: "100%",
         // paddingTop:
         paddingLeft: "10px",

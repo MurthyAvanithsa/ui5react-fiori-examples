@@ -16,7 +16,7 @@ export const DetailForm = () => {
     <div style={{ height: "100vh", overflow: "scroll" }}>
       <Form labelSpanS>
         <FormItem label={<Label>Well Completion</Label>}>
-          <Input icon={<Icon name="value-help" />} />
+          <Input disabled value={"WC1000071"} />
         </FormItem>
         <FormItem label={<Label>API Well Number</Label>}>
           <Input icon={<Icon name="value-help" />} />
@@ -40,9 +40,9 @@ export const DetailForm = () => {
           <Input icon={<Icon name="value-help" />} />
         </FormItem>
         <FormItem label="SHL Latitude">
-          <Input />
+          <Input required />
         </FormItem>
-        <FormItem label="SHL Longitude">
+        <FormItem required label="SHL Longitude">
           <Input />
         </FormItem>
         <FormItem label="BHL Latitude">
@@ -52,14 +52,14 @@ export const DetailForm = () => {
           <Input />
         </FormItem>
         <FormItem label="WC Xref1">
-          <Input icon={<Icon name="value-help" />} />
+          <Input icon={<Icon name="value-help" />} valueState={"Error"} />
         </FormItem>
         <FormItem label="WC Xref2">
           <Input icon={<Icon name="value-help" />} />
         </FormItem>
         <FormGroup title="GRP1">
           <FormItem label="Velocity">
-            <Input />
+            <Input valueState={"Warning"} />
           </FormItem>
           <FormItem label="Fluid Volume">
             <Input />
