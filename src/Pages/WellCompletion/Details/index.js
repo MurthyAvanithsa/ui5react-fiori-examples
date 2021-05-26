@@ -40,7 +40,7 @@ export const Details = () => {
       <div style={{ height: "calc(100vh - 113px)" }}>
         <SplitPane split="vertical">
           <DetailForm />
-          <SplitPane split="horizontal" size="80%">
+          <SplitPane split="horizontal" size="72%">
             <AgGridTable />
             <PropertyTable />
           </SplitPane>

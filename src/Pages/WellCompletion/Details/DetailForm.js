@@ -8,44 +8,54 @@ import {
   TextArea,
   FormGroup,
   Input,
+  Icon,
 } from "@ui5/webcomponents-react";
 
 export const DetailForm = () => {
   return (
     <div style={{ height: "100vh", overflow: "scroll" }}>
-      <Form>
-        <FormItem label="Well Completion">
-          <Input />
+      <Form labelSpanS>
+        <FormItem label={<Label>Well Completion</Label>}>
+          <Input icon={<Icon name="value-help" />} />
         </FormItem>
         <FormItem label={<Label>API Well Number</Label>}>
-          <Input />
+          <Input icon={<Icon name="value-help" />} />
         </FormItem>
-        <FormItem label="Well Completion">
-          <Input />
-        </FormItem>
-        <FormItem label={<Label>API Well Number</Label>}>
-          <Input />
+        <FormItem label={<Label>API WC Number</Label>}>
+          <Input icon={<Icon name="value-help" />} />
         </FormItem>
         <FormItem label="WC Type">
-          <Input />
+          <Select>
+            <Option>OW</Option>
+            <Option>GW</Option>
+          </Select>
+        </FormItem>
+        <FormItem label="State">
+          <Input icon={<Icon name="value-help" />} />
         </FormItem>
         <FormItem
           label="County
 "
         >
-          <Input />
+          <Input icon={<Icon name="value-help" />} />
         </FormItem>
         <FormItem label="SHL Latitude">
+          <Input />
+        </FormItem>
+        <FormItem label="SHL Longitude">
+          <Input />
+        </FormItem>
+        <FormItem label="BHL Latitude">
           <Input />
         </FormItem>
         <FormItem label="BHL Longitude">
           <Input />
         </FormItem>
         <FormItem label="WC Xref1">
-          <Input />
+          <Input icon={<Icon name="value-help" />} />
         </FormItem>
         <FormItem label="WC Xref2">
-          <Input />
+          <Input icon={<Icon name="value-help" />} />
         </FormItem>
         <FormGroup title="GRP1">
           <FormItem label="Velocity">

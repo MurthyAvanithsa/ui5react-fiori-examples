@@ -40,6 +40,8 @@ export const PropertyTable = (props) => {
   const columns = [
     {
       headerName: "Property",
+      headerCheckboxSelection: true,
+      checkboxSelection: true,
       field: "property",
       // resizable: true,
     },

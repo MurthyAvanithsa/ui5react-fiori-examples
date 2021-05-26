@@ -12,6 +12,8 @@ export const AgGridTable = (props) => {
   const columns = [
     {
       headerName: "Effective From",
+      headerCheckboxSelection: true,
+      checkboxSelection: true,
       field: "effective_from",
       // resizable: true,
     },
