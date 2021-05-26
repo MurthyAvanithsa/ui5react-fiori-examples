@@ -189,7 +189,7 @@ export const WellCompletionTable = (props) => {
       }}
     >
       <Toolbar style={{ padding: "24px" }}>
-        <Text>Dated Charactersitcs</Text>
+        <Text>Well completion</Text>
         <ToolbarSpacer />
         <Button key="add">Create</Button>
         <Button key="delete" design="Transparent">
