@@ -25,9 +25,9 @@ export const WellCompletionTable = (props) => {
     columnApi?.getAllColumns().forEach(function (column) {
       allColumnIds.push(column.colId);
     });
-    api?.sizeColumnsToFit();
+    // api?.sizeColumnsToFit();
 
-    // columnApi?.autoSizeColumns(allColumnIds, true);
+    columnApi?.autoSizeColumns(allColumnIds, true);
     setRowData(
       [...Array(100).keys()].map((value) => {
         return {
