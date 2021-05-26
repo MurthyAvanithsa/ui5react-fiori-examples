@@ -34,16 +34,18 @@ export const Details = () => {
         />
       }
       style={{
-        maxHeight: "calc(100vh - 44px)",
+        maxHeight: "100vh",
       }}
     >
-      <SplitPane split="vertical">
-        <DetailForm />
-        <SplitPane split="horizontal" size="80%">
-          <AgGridTable />
-          <PropertyTable />
+      <div style={{ height: "calc(100vh - 113px)" }}>
+        <SplitPane split="vertical">
+          <DetailForm />
+          <SplitPane split="horizontal" size="80%">
+            <AgGridTable />
+            <PropertyTable />
+          </SplitPane>
         </SplitPane>
-      </SplitPane>
+      </div>
     </DynamicPage>
   );
 };
