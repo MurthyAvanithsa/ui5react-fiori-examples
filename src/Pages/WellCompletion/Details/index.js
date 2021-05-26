@@ -16,7 +16,8 @@ export const Details = () => {
       showHideHeaderButton={false}
       title={
         <DynamicPageTitle
-          heading={<Title>WellCompletion: WC1000071</Title>}
+          heading={"WC1000071"}
+          subHeading={"WC1000071"}
           actions={[
             <Button key="add" design="Emphasized">
               Save
