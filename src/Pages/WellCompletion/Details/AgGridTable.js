@@ -121,7 +121,7 @@ export const AgGridTable = (props) => {
       style={{
         height: "100%",
         width: "100%",
-        // paddingTop:
+        paddingLeft: "10px",
       }}
     >
       <Toolbar style={{ padding: "24px" }}>

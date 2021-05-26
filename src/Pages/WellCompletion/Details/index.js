@@ -17,7 +17,7 @@ export const Details = () => {
       title={
         <DynamicPageTitle
           heading={"WC1000071"}
-          subHeading={"WC1000071"}
+          subHeading={"SubHeading"}
           actions={[
             <Button key="add" design="Emphasized">
               Save
@@ -42,8 +42,12 @@ export const Details = () => {
         <SplitPane split="vertical">
           <DetailForm />
           <SplitPane split="horizontal" size="72%">
-            <AgGridTable />
-            <PropertyTable />
+            <SplitPane split="horizontal">
+              <AgGridTable />
+            </SplitPane>
+            <SplitPane split="horizontal">
+              <PropertyTable />
+            </SplitPane>
           </SplitPane>
         </SplitPane>
       </div>
