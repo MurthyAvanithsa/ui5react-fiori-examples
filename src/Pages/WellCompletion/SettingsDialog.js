@@ -11,16 +11,15 @@ import {
   Input,
   CheckBox,
   Toolbar,
-  Text,
   ToolbarSpacer,
   Icon,
+  FlexBox,
 } from "@ui5/webcomponents-react";
 
 export const SettingsDialog = (props) => {
   const handleClose = () => {
     props.dialogSettingsRef.current.close();
   };
-  const showLoading = () => {};
   return (
     <div>
       <Dialog
@@ -142,52 +141,51 @@ export const SettingsDialog = (props) => {
           </Tab>
           <TabSeparator />
           <Tab text="Sort" style={{ overflowY: "hidden" }}>
-            <Title style={{ marginBottom: "8px", marginTop: "8px" }}>
-              Product
-            </Title>
-            <div style={{ display: "flex", marginBottom: "1em" }}>
-              <ComboBox>
-                <ComboBoxItem text="Equals" />
-                <ComboBoxItem text="Does Not Equal" />
-                <ComboBoxItem text="Greater Than" />
-                <ComboBoxItem text="Less Than" />
+            <FlexBox>
+              <ComboBox value="Well Number" style={{ width: "100%" }}>
+                <ComboBoxItem text="Well Number" />
+                <ComboBoxItem text="Well Completion" />
+                <ComboBoxItem text="API WellNo" />
+                <ComboBoxItem text="API WC No" />
               </ComboBox>
-              <Input style={{ marginLeft: "1em", width: "100%" }} />
-              <Button key="decline" design="Transparent" icon="decline" />
-            </div>
-            <div style={{ display: "flex", marginBottom: "1em" }}>
-              <ComboBox>
-                <ComboBoxItem text="Equals" />
-                <ComboBoxItem text="Does Not Equal" />
-                <ComboBoxItem text="Greater Than" />
-                <ComboBoxItem text="Less Than" />
+              <ComboBox
+                value="Ascending"
+                style={{ marginLeft: "1rem", width: "100%" }}
+              >
+                <ComboBoxItem text="Ascending" />
+                <ComboBoxItem text="Decending" />
               </ComboBox>
-              <Input style={{ marginLeft: "1em", width: "100%" }} />
-              <Button key="decline" design="Transparent" icon="decline" />
-            </div>
-            <div style={{ display: "flex", marginBottom: "1em" }}>
-              <ComboBox>
-                <ComboBoxItem text="Equals" />
-                <ComboBoxItem text="Does Not Equal" />
-                <ComboBoxItem text="Greater Than" />
-                <ComboBoxItem text="Less Than" />
-              </ComboBox>
-              <Input style={{ marginLeft: "1em", width: "100%" }} />
-              <Button key="decline" design="Transparent" icon="decline" />
-            </div>
-            <div style={{ display: "flex", marginBottom: "1em" }}>
-              <ComboBox>
-                <ComboBoxItem text="Equals" />
-                <ComboBoxItem text="Does Not Equal" />
-                <ComboBoxItem text="Greater Than" />
-                <ComboBoxItem text="Less Than" />
-              </ComboBox>
-              <Input style={{ marginLeft: "1em", width: "100%" }} />
-              <Button key="decline" design="Transparent" icon="decline" />
-            </div>
+              <Button
+                style={{ marginLeft: "1rem" }}
+                key="decline"
+                design="Transparent"
+                icon="message-error"
+              />
+              <Button key="add" design="Transparent" icon="add" />
+            </FlexBox>
           </Tab>
           <TabSeparator />
-          <Tab text="Filter">sdsdf</Tab>
+          <Tab text="Filter">
+            <FlexBox>
+              <ComboBox value="Well Number">
+                <ComboBoxItem text="Well Number" />
+                <ComboBoxItem text="Well Completion" />
+                <ComboBoxItem text="API WellNo" />
+                <ComboBoxItem text="API WC No" />
+              </ComboBox>
+              <ComboBox value="equal to" style={{ marginLeft: "1rem" }}>
+                <ComboBoxItem text="equal to" />
+                <ComboBoxItem text="greater than" />
+                <ComboBoxItem text="less than" />
+                <ComboBoxItem text="less than or equal to" />
+              </ComboBox>
+              <Input
+                placeholder="Value"
+                style={{ marginLeft: "1em", width: "100%" }}
+              />
+              <Button key="decline" design="Transparent" icon="decline" />
+            </FlexBox>
+          </Tab>
         </TabContainer>
       </Dialog>
     </div>
