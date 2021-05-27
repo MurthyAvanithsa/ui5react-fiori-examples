@@ -3,20 +3,19 @@ import "ag-grid-community/dist/styles/ag-theme-balham.css";
 
 import {
   Button,
-  FlexBox,
-  Text,
   Toolbar,
   ToolbarSpacer,
-  Grid,
-  Icon,
+  Title,
 } from "@ui5/webcomponents-react";
 import { AgGridReact } from "ag-grid-react";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import { SettingsDialog } from "./SettingsDialog";
 
 export const WellCompletionTable = (props) => {
   const [api, setApi] = useState(null);
   const [columnApi, setColumnApi] = useState(null);
   const [rowData, setRowData] = useState(null);
+  const dialogSettingsRef = useRef(null);
 
   React.useEffect(() => {
     if (columnApi !== null) {
@@ -179,6 +178,10 @@ export const WellCompletionTable = (props) => {
     },
   ];
 
+  const handleSettings = () => {
+    dialogSettingsRef.current.open();
+  };
+
   return (
     <div
       className="ag-theme-balham"
@@ -188,21 +191,26 @@ export const WellCompletionTable = (props) => {
         paddingLeft: "10px",
       }}
     >
-      <Toolbar style={{ padding: "24px" }}>
-        <Text>Well completion</Text>
+      <Toolbar style={{ paddingTop: "28px", paddingBottom: "28px" }}>
+        <Title level="H4">Well completion</Title>
         <ToolbarSpacer />
         <Button key="add">Create</Button>
         <Button key="delete" design="Transparent">
           Delete
         </Button>
-        <Button key="settings" design="Transparent" icon="action-settings" />,
+        <Button
+          key="settings"
+          design="Transparent"
+          icon="action-settings"
+          onClick={handleSettings}
+        />
       </Toolbar>
       <AgGridReact
-        // rowHeight={50}
         onGridReady={onGridReady}
         columnDefs={columns}
         rowData={rowData}
-      ></AgGridReact>
+      />
+      <SettingsDialog dialogSettingsRef={dialogSettingsRef} />
     </div>
   );
 };

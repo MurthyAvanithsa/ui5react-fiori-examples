@@ -3,6 +3,7 @@ import {
   DynamicPage,
   DynamicPageHeader,
   DynamicPageTitle,
+  FlexBox,
   VariantManagement,
 } from "@ui5/webcomponents-react";
 import React, { useRef } from "react";
@@ -13,52 +14,52 @@ import { WCValueHelperDialog } from "./WCValueHelper";
 
 export const WellCompletion = () => {
   const dialogRef = useRef(null);
-  const handleOpen = (e) => {
+  const handleOpen = () => {
     dialogRef.current.open();
   };
   return (
-    <DynamicPage
-      title={
-        <DynamicPageTitle
-          actions={[
-            <Button key="add">Create</Button>,
-            <Button key="copy" design="Transparent">
-              Copy
-            </Button>,
-          ]}
-          heading={
-            <VariantManagement
-              onSelect={function noRefCheck() {}}
-              selectedKey="1"
-              variantItems={[
-                { key: "1", label: "Standard" },
-                { key: "2", label: "Advanced" },
-              ]}
-            />
-          }
-          navigationActions={[
-            <Button key="decline" design="Transparent" icon="print" />,
-          ]}
-        />
-      }
-      header={
-        <DynamicPageHeader>
-          <WCHeader handleValueHelp={handleOpen} />
-        </DynamicPageHeader>
-      }
-      style={
-        {
-          // maxHeight: "calc(100vh - 44px)",
+    <FlexBox>
+      <DynamicPage
+        title={
+          <DynamicPageTitle
+            actions={[
+              <Button key="add">Create</Button>,
+              <Button key="copy" design="Transparent">
+                Copy
+              </Button>,
+            ]}
+            heading={
+              <VariantManagement
+                onSelect={function noRefCheck() {}}
+                selectedKey="1"
+                variantItems={[
+                  { key: "1", label: "Standard" },
+                  { key: "2", label: "Advanced" },
+                ]}
+              />
+            }
+            navigationActions={[
+              <Button key="decline" design="Transparent" icon="print" />,
+            ]}
+          />
         }
-      }
-    >
-      <div
-        className="ag-theme-balham"
-        style={{ height: "calc(100vh - 113px)" }}
+        header={
+          <DynamicPageHeader>
+            <WCHeader handleValueHelp={handleOpen} />
+          </DynamicPageHeader>
+        }
+        style={{
+          maxHeight: "calc(100vh - 44px)",
+        }}
       >
-        <WellCompletionTable />
-      </div>
-      {/* <WCValueHelperDialog dialogRef={dialogRef} /> */}
-    </DynamicPage>
+        <div
+          className="ag-theme-balham"
+          style={{ height: "calc(100vh - 113px)" }}
+        >
+          <WellCompletionTable />
+        </div>
+        <WCValueHelperDialog dialogRef={dialogRef} />
+      </DynamicPage>
+    </FlexBox>
   );
 };

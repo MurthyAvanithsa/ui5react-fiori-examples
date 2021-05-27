@@ -1,4 +1,4 @@
-import { ThemeProvider } from "@ui5/webcomponents-react";
+import { FlexBox, ThemeProvider } from "@ui5/webcomponents-react";
 import React from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { AppShellBar } from "./AppShellBar";
@@ -16,12 +16,7 @@ function App() {
   return (
     <ThemeProvider>
       <AppShellBar onMenuClick={handleClick} />
-      <div
-        style={{
-          display: "flex",
-          height: "calc(100vh - 44px)",
-        }}
-      >
+      <FlexBox fitContainer>
         <AppSideNavigation collapsed={expand} />
         <BrowserRouter>
           <Switch>
@@ -31,7 +26,7 @@ function App() {
             <Redirect from="/" to="/well-completion" />
           </Switch>
         </BrowserRouter>
-      </div>
+      </FlexBox>
     </ThemeProvider>
   );
 }

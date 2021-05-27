@@ -1,11 +1,9 @@
 import {
-  CheckBox,
   Form,
   FormItem,
   Label,
   Option,
   Select,
-  TextArea,
   FormGroup,
   Input,
   Icon,

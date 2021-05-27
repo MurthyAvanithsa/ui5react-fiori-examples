@@ -15,12 +15,14 @@ export const AgGridTable = (props) => {
       headerCheckboxSelection: true,
       checkboxSelection: true,
       field: "effective_from",
-      // resizable: true,
+      resizable: true,
+      width: 130,
     },
     {
       headerName: "Effective To",
       field: "effective_to",
       resizable: true,
+      width: 100,
     },
     {
       headerName: "Well Class",
@@ -133,7 +135,6 @@ export const AgGridTable = (props) => {
         </Button>
       </Toolbar>
       <AgGridReact
-        // rowHeight={50}
         onGridReady={onGridReady}
         columnDefs={columns}
         rowData={rowData}

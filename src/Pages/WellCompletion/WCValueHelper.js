@@ -11,6 +11,7 @@ import {
   Input,
   Label,
   MultiInput,
+  Option,
   Tab,
   TabContainer,
   Table,
@@ -19,6 +20,7 @@ import {
   TableRow,
   Title,
   Token,
+  Select,
 } from "@ui5/webcomponents-react";
 import React from "react";
 import { Grid } from "@material-ui/core";
@@ -50,11 +52,13 @@ export const WCValueHelperDialog = (props) => {
       >
         <Tab selected text="Search and Select">
           <FilterBar
-            useToolbar={false}
+            // useToolbar={false}
             filterContainerWidth="13.125rem"
             showFilterConfiguration={false}
+            showGoOnFB
+            hideToggleFiltersButton={true}
           >
-            <FilterGroupItem label="Well Number">
+            {/* <FilterGroupItem label="Well Number">
               <Input icon={<Icon name="value-help" />} placeholder="" />
             </FilterGroupItem>
             <FilterGroupItem label="Well Completion">
@@ -71,23 +75,49 @@ export const WCValueHelperDialog = (props) => {
             </FilterGroupItem>
             <FilterGroupItem label="WC Type">
               <Input icon={<Icon name="value-help" />} placeholder="" />
+            </FilterGroupItem>*/}
+            <FilterGroupItem label="Well Number">
+              <Input icon={<Icon name="value-help" />} placeholder="" />
             </FilterGroupItem>
-            <FilterGroupItem label="">
-              <CheckBox
-                className=""
-                onChange={function noRefCheck() {}}
-                slot=""
-                text="Operated"
-                tooltip=""
-              />
+            <FilterGroupItem label="Well Completion">
+              <Input icon={<Icon name="value-help" />} placeholder="" />
+            </FilterGroupItem>
+            <FilterGroupItem label="WC Name">
+              <Input icon={<Icon name="value-help" />} placeholder="" />
+            </FilterGroupItem>
+            <FilterGroupItem label="API Well Number">
+              <Input icon={<Icon name="value-help" />} placeholder="" />
+            </FilterGroupItem>
+            <FilterGroupItem label="API WC Number">
+              <Input icon={<Icon name="value-help" />} placeholder="" />
+            </FilterGroupItem>
+            <FilterGroupItem label="WC Type">
+              <Select>
+                <Option>LI</Option>
+                <Option>OH</Option>
+              </Select>
+            </FilterGroupItem>
+            <FilterGroupItem label="State">
+              <Input icon={<Icon name="value-help" />} placeholder="" />
+            </FilterGroupItem>
+            <FilterGroupItem label={"County"}>
+              <Input icon={<Icon name={"value-help"} placeholder={""} />} />
+            </FilterGroupItem>
+            <FilterGroupItem label={"WC Xref1"}>
+              <Input icon={<Icon name={"value-help"} placeholder={""} />} />
+            </FilterGroupItem>
+            <FilterGroupItem label={"WC Xref2"}>
+              <Input icon={<Icon name={"value-help"} placeholder={""} />} />
             </FilterGroupItem>
           </FilterBar>
+
           <Grid container justify="space-between" style={{ height: "90%" }}>
             <Grid item xs={12}>
               <div style={spacing.sapUiMediumMarginTop}>
                 <Title style={{ marginBottom: "8px", marginTop: "8px" }}>
                   Items (123)
                 </Title>
+
                 <Table
                   columns={
                     <>

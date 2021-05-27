@@ -43,7 +43,7 @@ export const PropertyTable = (props) => {
       headerCheckboxSelection: true,
       checkboxSelection: true,
       field: "property",
-      // resizable: true,
+      resizable: true,
     },
     {
       headerName: "DOI",

@@ -2,7 +2,6 @@ import {
   Button,
   DynamicPage,
   DynamicPageTitle,
-  Title,
 } from "@ui5/webcomponents-react";
 import SplitPane from "react-split-pane";
 import { AgGridTable } from "./AgGridTable";
