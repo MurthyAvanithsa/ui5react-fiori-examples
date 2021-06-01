@@ -8,16 +8,36 @@ import {
   Title,
   // VariantManagement,
   ToolbarSeparator,
+  Popover,
+  Bar,
+  Icon,
+  List,
+  StandardListItem,
+  VariantManagement,
 } from "@ui5/webcomponents-react";
 import { AgGridReact } from "ag-grid-react";
 import React, { useRef, useState } from "react";
+import { createUseStyles } from "react-jss";
+import { ThemingParameters } from "@ui5/webcomponents-react-base/dist/ThemingParameters";
+import { spacing } from "@ui5/webcomponents-react-base";
 import { SettingsDialog } from "../WellCompletion/TableSettings";
+
+const styles = {
+  title: {
+    color: ThemingParameters.sapButton_TextColor,
+    cursor: "pointer",
+  },
+};
+
+const useStyles = createUseStyles(styles, { name: "WellCompletionTable" });
 
 export const WellCompletionTable = (props) => {
   const [api, setApi] = useState(null);
   const [columnApi, setColumnApi] = useState(null);
   const [rowData, setRowData] = useState(null);
   const dialogSettingsRef = useRef(null);
+  const popoverRef = useRef();
+  const classes = useStyles();
 
   React.useEffect(() => {
     if (columnApi !== null) {
@@ -196,21 +216,49 @@ export const WellCompletionTable = (props) => {
       <Toolbar style={{ paddingTop: "28px", paddingBottom: "28px" }}>
         <Title level="H4">Line Items (54)</Title>
         <ToolbarSeparator />
-        {/* <VariantManagement
-          onSelect={function noRefCheck() {}}
-          selectedKey="2"
-          variantItems={[
-            {
-              key: "1",
-              label: "Variant 1",
-            },
-            {
-              key: "2",
-              label: "Variant 2",
-            },
-          ]}
-        /> */}
+        <>
+          <Title level="H4" className={classes.title}>
+            Standard
+          </Title>
+          <Button
+            onClick={function onButtonClick(e) {
+              popoverRef.current.openBy(e.target);
+            }}
+            design="Transparent"
+            icon="navigation-down-arrow"
+            style={{ marginLeft: "-8px" }}
+          />
+          <Popover
+            ref={popoverRef}
+            placementType="Bottom"
+            footer={
+              <Bar
+                endContent={
+                  <>
+                    <Button
+                      onClick={function noRefCheck() {}}
+                      design="Emphasized"
+                    >
+                      Save As
+                    </Button>
 
+                    <Button onClick={function noRefCheck() {}}>Manage</Button>
+                  </>
+                }
+              />
+            }
+            header={<Bar startContent={<Title level="H6">My Views</Title>} />}
+            headerText="My Views"
+          >
+            <div style={{ width: "400px", height: "300px", maxWidth: "954px" }}>
+              <List>
+                <StandardListItem>Standard</StandardListItem>
+                <StandardListItem>Layout 1</StandardListItem>
+                <StandardListItem>Layout 2</StandardListItem>
+              </List>
+            </div>
+          </Popover>
+        </>
         <ToolbarSpacer />
         <Button key="add">Create</Button>
         <Button key="delete" design="Transparent">
