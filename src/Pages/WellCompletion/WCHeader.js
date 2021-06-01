@@ -4,6 +4,8 @@ import {
   FilterGroupItem,
   Icon,
   Input,
+  MultiComboBox,
+  MultiComboBoxItem,
   Option,
   Select,
 } from "@ui5/webcomponents-react";
@@ -70,10 +72,13 @@ export const WCHeader = (props) => {
         />
       </FilterGroupItem>
       <FilterGroupItem label="County">
-        <Input
-          icon={<Icon name="value-help" onClick={props.handleValueHelp} />}
-          placeholder=""
-        />
+        <MultiComboBox required>
+          <MultiComboBoxItem text="USA" />
+          <MultiComboBoxItem text="India" />
+          <MultiComboBoxItem text="China" />
+          <MultiComboBoxItem text="Japan" />
+          <MultiComboBoxItem text="Iraq" />
+        </MultiComboBox>
       </FilterGroupItem>
       <FilterGroupItem label="DOI">
         <Input
@@ -125,10 +130,13 @@ export const WCHeader = (props) => {
         <Input icon={<Icon name="value-help" />} placeholder="" />
       </FilterGroupItem>
       <FilterGroupItem label="State">
-        <Input
-          icon={<Icon name="value-help" onClick={props.handleValueHelp} />}
-          placeholder=""
-        />
+        <MultiComboBox required>
+          <MultiComboBoxItem text="California" />
+          <MultiComboBoxItem text="Texas" />
+          <MultiComboBoxItem text="Florida" />
+          <MultiComboBoxItem text="Alaska" />
+          <MultiComboBoxItem text="Georgia" />
+        </MultiComboBox>
       </FilterGroupItem>
       <FilterGroupItem label="WC Type">
         <Select>

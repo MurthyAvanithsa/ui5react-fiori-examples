@@ -7,7 +7,6 @@ import {
   Dialog,
   FilterBar,
   FilterGroupItem,
-  Icon,
   Input,
   Label,
   MultiInput,
@@ -21,6 +20,8 @@ import {
   Title,
   Token,
   Select,
+  MultiComboBox,
+  MultiComboBoxItem,
 } from "@ui5/webcomponents-react";
 import React from "react";
 import { Grid } from "@material-ui/core";
@@ -33,6 +34,8 @@ export const WCValueHelperDialog = (props) => {
 
   return (
     <Dialog
+      resizable
+      draggable
       ref={props.dialogRef}
       style={{ zIndex: 9999 }}
       className=""
@@ -52,44 +55,26 @@ export const WCValueHelperDialog = (props) => {
       >
         <Tab selected text="Search and Select">
           <FilterBar
-            // useToolbar={false}
-            filterContainerWidth="13.125rem"
+            activeFiltersCount
+            // filterContainerWidth="13.125rem"
             showFilterConfiguration={false}
             showGoOnFB
-            hideToggleFiltersButton={true}
+            hideToggleFiltersButton
           >
-            {/* <FilterGroupItem label="Well Number">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Well Completion">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="WC Name">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="API Well Number">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="API WC Number">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="WC Type">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>*/}
             <FilterGroupItem label="Well Number">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
+              <Input placeholder="" />
             </FilterGroupItem>
             <FilterGroupItem label="Well Completion">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
+              <Input placeholder="" />
             </FilterGroupItem>
             <FilterGroupItem label="WC Name">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
+              <Input placeholder="" />
             </FilterGroupItem>
             <FilterGroupItem label="API Well Number">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
+              <Input placeholder="" />
             </FilterGroupItem>
             <FilterGroupItem label="API WC Number">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
+              <Input placeholder="" />
             </FilterGroupItem>
             <FilterGroupItem label="WC Type">
               <Select>
@@ -97,17 +82,29 @@ export const WCValueHelperDialog = (props) => {
                 <Option>OH</Option>
               </Select>
             </FilterGroupItem>
-            <FilterGroupItem label="State">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
+            <FilterGroupItem label={"State"}>
+              <MultiComboBox required>
+                <MultiComboBoxItem text="California" />
+                <MultiComboBoxItem text="Texas" />
+                <MultiComboBoxItem text="Florida" />
+                <MultiComboBoxItem text="Alaska" />
+                <MultiComboBoxItem text="Georgia" />
+              </MultiComboBox>
             </FilterGroupItem>
             <FilterGroupItem label={"County"}>
-              <Input icon={<Icon name={"value-help"} placeholder={""} />} />
+              <MultiComboBox required>
+                <MultiComboBoxItem text="USA" />
+                <MultiComboBoxItem text="India" />
+                <MultiComboBoxItem text="China" />
+                <MultiComboBoxItem text="Japan" />
+                <MultiComboBoxItem text="Iraq" />
+              </MultiComboBox>
             </FilterGroupItem>
             <FilterGroupItem label={"WC Xref1"}>
-              <Input icon={<Icon name={"value-help"} placeholder={""} />} />
+              <Input />
             </FilterGroupItem>
             <FilterGroupItem label={"WC Xref2"}>
-              <Input icon={<Icon name={"value-help"} placeholder={""} />} />
+              <Input />
             </FilterGroupItem>
           </FilterBar>
 

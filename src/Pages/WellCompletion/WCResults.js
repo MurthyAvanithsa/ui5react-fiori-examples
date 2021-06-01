@@ -6,10 +6,12 @@ import {
   Toolbar,
   ToolbarSpacer,
   Title,
+  // VariantManagement,
+  ToolbarSeparator,
 } from "@ui5/webcomponents-react";
 import { AgGridReact } from "ag-grid-react";
 import React, { useRef, useState } from "react";
-import { SettingsDialog } from "./SettingsDialog";
+import { SettingsDialog } from "../WellCompletion/TableSettings";
 
 export const WellCompletionTable = (props) => {
   const [api, setApi] = useState(null);
@@ -192,7 +194,23 @@ export const WellCompletionTable = (props) => {
       }}
     >
       <Toolbar style={{ paddingTop: "28px", paddingBottom: "28px" }}>
-        <Title level="H4">Well completion</Title>
+        <Title level="H4">Line Items (54)</Title>
+        <ToolbarSeparator />
+        {/* <VariantManagement
+          onSelect={function noRefCheck() {}}
+          selectedKey="2"
+          variantItems={[
+            {
+              key: "1",
+              label: "Variant 1",
+            },
+            {
+              key: "2",
+              label: "Variant 2",
+            },
+          ]}
+        /> */}
+
         <ToolbarSpacer />
         <Button key="add">Create</Button>
         <Button key="delete" design="Transparent">
