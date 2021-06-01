@@ -18,7 +18,7 @@ export const WellCompletion = () => {
     dialogRef.current.open();
   };
   return (
-    <FlexBox>
+    <FlexBox fitContainer>
       <DynamicPage
         title={
           <DynamicPageTitle
