@@ -10,7 +10,7 @@ import React, { useRef } from "react";
 
 import { WCHeader } from "./WCHeader";
 import { WellCompletionTable } from "./WCResults";
-import { WCValueHelperDialog } from "./WCValueHelper";
+// import { WCValueHelperDialog } from "./WCValueHelper";
 
 export const WellCompletion = () => {
   const dialogRef = useRef(null);

@@ -1,4 +1,4 @@
-import { FilterGroupItem, Icon, Input } from "@ui5/webcomponents-react";
+import { Icon, Input } from "@ui5/webcomponents-react";
 import React, { useRef } from "react";
 
 import { WCValueHelperDialog } from "./WCValueHelper";

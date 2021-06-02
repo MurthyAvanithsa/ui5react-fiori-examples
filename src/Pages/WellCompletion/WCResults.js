@@ -6,21 +6,19 @@ import {
   Toolbar,
   ToolbarSpacer,
   Title,
-  // VariantManagement,
   ToolbarSeparator,
   Popover,
   Bar,
-  Icon,
   List,
   StandardListItem,
-  VariantManagement,
 } from "@ui5/webcomponents-react";
 import { AgGridReact } from "ag-grid-react";
 import React, { useRef, useState } from "react";
 import { createUseStyles } from "react-jss";
 import { ThemingParameters } from "@ui5/webcomponents-react-base/dist/ThemingParameters";
-import { spacing } from "@ui5/webcomponents-react-base";
 import { SettingsDialog } from "../WellCompletion/TableSettings";
+import { SaveAsDialog } from "./TableSettings/SaveAsDialog";
+import { ManageDialog } from "./TableSettings/ManageDialog";
 
 const styles = {
   title: {
@@ -37,6 +35,8 @@ export const WellCompletionTable = (props) => {
   const [rowData, setRowData] = useState(null);
   const dialogSettingsRef = useRef(null);
   const popoverRef = useRef();
+  const saveAsRef = useRef();
+  const manageRef = useRef();
   const classes = useStyles();
 
   React.useEffect(() => {
@@ -204,6 +204,16 @@ export const WellCompletionTable = (props) => {
     dialogSettingsRef.current.open();
   };
 
+  const onSaveAsClick = () => {
+    popoverRef.current.close();
+    saveAsRef.current.open();
+  };
+
+  const onManageClick = () => {
+    popoverRef.current.close();
+    manageRef.current.open();
+  };
+
   return (
     <div
       className="ag-theme-balham"
@@ -235,14 +245,12 @@ export const WellCompletionTable = (props) => {
               <Bar
                 endContent={
                   <>
-                    <Button
-                      onClick={function noRefCheck() {}}
-                      design="Emphasized"
-                    >
+                    <Button onClick={onSaveAsClick} design="Emphasized">
                       Save As
                     </Button>
-
-                    <Button onClick={function noRefCheck() {}}>Manage</Button>
+                    <SaveAsDialog saveAsRef={saveAsRef} />
+                    <Button onClick={onManageClick}>Manage</Button>
+                    <ManageDialog manageRef={manageRef} />
                   </>
                 }
               />
@@ -260,9 +268,9 @@ export const WellCompletionTable = (props) => {
           </Popover>
         </>
         <ToolbarSpacer />
-        <Button key="add">Create</Button>
+        <Button key="add">Open(2)</Button>
         <Button key="delete" design="Transparent">
-          Delete
+          Edit
         </Button>
         <Button
           key="settings"
@@ -272,6 +280,7 @@ export const WellCompletionTable = (props) => {
         />
       </Toolbar>
       <AgGridReact
+        // editType={"fullRow"}
         onGridReady={onGridReady}
         columnDefs={columns}
         rowData={rowData}
