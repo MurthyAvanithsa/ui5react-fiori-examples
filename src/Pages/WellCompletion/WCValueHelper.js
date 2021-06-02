@@ -27,10 +27,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 export const WCValueHelperDialog = (props) => {
+  const [loading, setLoading] = React.useState(false);
   const handleClose = () => {
     props.dialogRef.current.close();
   };
-
+  const handleGo = (event) => {
+    setLoading((value) => !value);
+    setTimeout(() => {
+      setLoading((value) => !value);
+    }, 3000);
+  };
   return (
     <>
       {ReactDOM.createPortal(
@@ -58,22 +64,20 @@ export const WCValueHelperDialog = (props) => {
                 filterContainerWidth="13.125rem"
                 showFilterConfiguration={false}
                 showGoOnFB
-                // hideToggleFiltersButton
+                hideToggleFiltersButton
+                onGo={handleGo}
               >
-                {props.queryHelperMeta.map((field, index) => {
+                {props.queryHelperMeta.metaData.map((field, index) => {
                   if (field.drop_down || field.isCheckbox) {
                     return (
                       <FilterGroupItem
                         label={field.label}
-                        key={`${index}-'field`}
+                        key={`${index}-field`}
                       >
-                        {/* {field.selectOptions.map((option) => {
-                            console.log("field.selectOptions", option);
-                            <Option>{option}</Option>;
-                          })} */}
                         <Select>
-                          <Option>Yes</Option>
-                          <Option>No</Option>
+                          {field.selectOptions.map((option, index) => (
+                            <Option key={`${index}-'option`}>{option}</Option>
+                          ))}
                         </Select>
                       </FilterGroupItem>
                     );
@@ -88,62 +92,6 @@ export const WCValueHelperDialog = (props) => {
                     );
                   }
                 })}
-                {/* {props.queryHelperMeta.map((fieldMeta) => {
-                  if (fieldMeta.drop_down) {
-                    <FilterGroupItem label={fieldMeta.label}>
-                      <Select />
-                    </FilterGroupItem>;
-                  } else {
-                    <FilterGroupItem label={fieldMeta.label}>
-                      <Input />
-                    </FilterGroupItem>;
-                  }
-                })} */}
-                {/* <FilterGroupItem label="Well Number">
-              <Input placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Well Completion">
-              <Input placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="WC Name">
-              <Input placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="API Well Number">
-              <Input placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="API WC Number">
-              <Input placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="WC Type">
-              <Select>
-                <Option>LI</Option>
-                <Option>OH</Option>
-              </Select>
-            </FilterGroupItem>
-            <FilterGroupItem label={"State"}>
-              <MultiComboBox required>
-                <MultiComboBoxItem text="California" />
-                <MultiComboBoxItem text="Texas" />
-                <MultiComboBoxItem text="Florida" />
-                <MultiComboBoxItem text="Alaska" />
-                <MultiComboBoxItem text="Georgia" />
-              </MultiComboBox>
-            </FilterGroupItem>
-            <FilterGroupItem label={"County"}>
-              <MultiComboBox required>
-                <MultiComboBoxItem text="USA" />
-                <MultiComboBoxItem text="India" />
-                <MultiComboBoxItem text="China" />
-                <MultiComboBoxItem text="Japan" />
-                <MultiComboBoxItem text="Iraq" />
-              </MultiComboBox>
-            </FilterGroupItem>
-            <FilterGroupItem label={"WC Xref1"}>
-              <Input />
-            </FilterGroupItem>
-            <FilterGroupItem label={"WC Xref2"}>
-              <Input />
-            </FilterGroupItem> */}
               </FilterBar>
 
               <Grid container justify="space-between" style={{ height: "90%" }}>
@@ -154,29 +102,19 @@ export const WCValueHelperDialog = (props) => {
                     </Title>
 
                     <Table
+                      busy={loading}
                       columns={
                         <>
                           <TableColumn>
                             <CheckBox />
                           </TableColumn>
-                          <TableColumn popinText="Well Number">
-                            <Label>Well Number</Label>
-                          </TableColumn>
-                          <TableColumn popinText="Well Completion">
-                            <Label>Well Completion</Label>
-                          </TableColumn>
-                          <TableColumn popinText="WC Name">
-                            <Label>WC Name</Label>
-                          </TableColumn>
-                          <TableColumn>
-                            <Label>API Well Number</Label>
-                          </TableColumn>
-                          <TableColumn>
-                            <Label>API WC Number</Label>
-                          </TableColumn>
-                          <TableColumn>
-                            <Label>WC Type</Label>
-                          </TableColumn>
+                          {props.queryHelperMeta.columnHeaders.map(
+                            (column, index) => (
+                              <TableColumn>
+                                <Label key={`${index}-'column`}>{column}</Label>
+                              </TableColumn>
+                            )
+                          )}
                         </>
                       }
                     >
@@ -185,45 +123,31 @@ export const WCValueHelperDialog = (props) => {
                           <CheckBox />
                         </TableCell>
                         <TableCell>
-                          <Label>Very Best Screens</Label>
+                          <Label>WL1001</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>30 x 18 x 3cm</Label>
+                          <Label>01</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>4.2KG</Label>
+                          <Label>Tara Battee</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>956EUR</Label>
+                          <Label>ALW1001</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>956EUR</Label>
+                          <Label>A1</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>956EUR</Label>
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell>
-                          <CheckBox />
+                          <Label>Alabama</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>Very Best Screens</Label>
+                          <Label>Autauga County</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>30 x 18 x 3cm</Label>
+                          <Label>TC Energy</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>4.2KG</Label>
-                        </TableCell>
-                        <TableCell>
-                          <Label>956EUR</Label>
-                        </TableCell>
-                        <TableCell>
-                          <Label>956EUR</Label>
-                        </TableCell>
-                        <TableCell>
-                          <Label>956EUR</Label>
+                          <Label>Energy Transfer</Label>
                         </TableCell>
                       </TableRow>
                       <TableRow>
@@ -231,45 +155,31 @@ export const WCValueHelperDialog = (props) => {
                           <CheckBox />
                         </TableCell>
                         <TableCell>
-                          <Label>Very Best Screens</Label>
+                          <Label>WL1002</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>30 x 18 x 3cm</Label>
+                          <Label>02</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>4.2KG</Label>
+                          <Label>Annie Vaux</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>956EUR</Label>
+                          <Label>ALW1002</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>956EUR</Label>
+                          <Label>A2</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>956EUR</Label>
-                        </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell>
-                          <CheckBox />
+                          <Label>Alabama</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>Very Best Screens</Label>
+                          <Label>Henry County</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>30 x 18 x 3cm</Label>
+                          <Label>TC Energy</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>4.2KG</Label>
-                        </TableCell>
-                        <TableCell>
-                          <Label>956EUR</Label>
-                        </TableCell>
-                        <TableCell>
-                          <Label>956EUR</Label>
-                        </TableCell>
-                        <TableCell>
-                          <Label>956EUR</Label>
+                          <Label>Energy Transfer</Label>
                         </TableCell>
                       </TableRow>
                       <TableRow>
@@ -277,22 +187,95 @@ export const WCValueHelperDialog = (props) => {
                           <CheckBox />
                         </TableCell>
                         <TableCell>
-                          <Label>Very Best Screens</Label>
+                          <Label>WL1003</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>29 x 17 x 3.1cm</Label>
+                          <Label>03</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>4.5KG</Label>
+                          <Label>Tara Battee</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>1249EUR</Label>
+                          <Label>ALW1003</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>956EUR</Label>
+                          <Label>A3</Label>
                         </TableCell>
                         <TableCell>
-                          <Label>956EUR</Label>
+                          <Label>Alaska</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>Elmory County</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>TC Energy</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>Williams Companies</Label>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>
+                          <CheckBox />
+                        </TableCell>
+                        <TableCell>
+                          <Label>WL1004</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>04</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>Richard Connolly</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>ALW1004</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>A4</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>New Jersy</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>Winston County</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>TC Energy</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>Energy Transfer</Label>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>
+                          <CheckBox />
+                        </TableCell>
+                        <TableCell>
+                          <Label>WL1005</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>05</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>Tara Battee</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>ALW1005</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>A5</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>North Dakota</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>Monre County</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>Enbridge</Label>
+                        </TableCell>
+                        <TableCell>
+                          <Label>Energy Transfer</Label>
                         </TableCell>
                       </TableRow>
                     </Table>

@@ -2118,8 +2118,13 @@
 
 "@ui5/webcomponents-react-base@^0.16.0":
   version "0.16.0"
+<<<<<<< HEAD
   resolved "https://registry.nlark.com/@ui5/webcomponents-react-base/download/@ui5/webcomponents-react-base-0.16.0.tgz#b61f536abe2e43adc2e2570304cb1891019c2db2"
   integrity sha1-th9Tar4uQ63C4lcDBMsYkQGcLbI=
+=======
+  resolved "https://registry.yarnpkg.com/@ui5/webcomponents-react-base/-/webcomponents-react-base-0.16.0.tgz#b61f536abe2e43adc2e2570304cb1891019c2db2"
+  integrity sha512-lvG0UzOVdlKEqqjWOv2u613SFkStubK4q+7x8lpeiNbIRjAPokEuvZ0aPIZ3LiKy+b2+KM4f+zB8DBoVmFuSiQ==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     "@babel/runtime" "7.14.0"
     core-js "3.12.1"
@@ -2129,8 +2134,13 @@
 
 "@ui5/webcomponents-react@^0.16.1":
   version "0.16.1"
+<<<<<<< HEAD
   resolved "https://registry.nlark.com/@ui5/webcomponents-react/download/@ui5/webcomponents-react-0.16.1.tgz#5d01f62a0985bd5749cfdcc0043289b08b8ded4f"
   integrity sha1-XQH2KgmFvVdJz9zABDKJsIuN7U8=
+=======
+  resolved "https://registry.yarnpkg.com/@ui5/webcomponents-react/-/webcomponents-react-0.16.1.tgz#5d01f62a0985bd5749cfdcc0043289b08b8ded4f"
+  integrity sha512-MxGmiqKmjdWpR6qtXL/kbsBvCCELbsKvPBo1tPrPeaAv7FxuhgYLfsa9sFr1JB8yhhlWLQ/7d8sbnF3QPQcocw==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     "@babel/runtime" "7.14.0"
     "@ui5/webcomponents-react-base" "^0.16.0"
@@ -2370,6 +2380,7 @@ adjust-sourcemap-loader@3.0.0:
 
 ag-grid-community@22.1.1:
   version "22.1.1"
+<<<<<<< HEAD
   resolved "https://registry.nlark.com/ag-grid-community/download/ag-grid-community-22.1.1.tgz#279d0b4a3ab199dc647714add0d2d393a75315cb"
   integrity sha1-J50LSjqxmdxkdxSt0NLTk6dTFcs=
 
@@ -2377,6 +2388,15 @@ ag-grid-react@22.1.1:
   version "22.1.1"
   resolved "https://registry.nlark.com/ag-grid-react/download/ag-grid-react-22.1.1.tgz#59a8ad8e72263e47ccf12718f045dccc425c5f06"
   integrity sha1-WaitjnImPkfM8ScY8EXczEJcXwY=
+=======
+  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-22.1.1.tgz#279d0b4a3ab199dc647714add0d2d393a75315cb"
+  integrity sha512-FNyv9e9JIuuR8NNi/r3NjIjUVy2/K5GgPjwQ63g9/Z4U8EudQZLINGMVKI6OwtZfWyyNSd0hQDCNsdvx0OR1WQ==
+
+ag-grid-react@22.1.1:
+  version "22.1.1"
+  resolved "https://registry.yarnpkg.com/ag-grid-react/-/ag-grid-react-22.1.1.tgz#59a8ad8e72263e47ccf12718f045dccc425c5f06"
+  integrity sha512-zMz2R3pyo2hEw+GUL0YcsrcMFPxcs7ZjMyhBJpqxfMT/EdwFEGupsrRHKZQjxTaEAgawDhx8Rzt8dNFBLNk3qw==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     prop-types "^15.6.2"
 
@@ -2998,8 +3018,13 @@ boolbase@^1.0.0, boolbase@~1.0.0:
 
 bowser@^1.7.3:
   version "1.9.4"
+<<<<<<< HEAD
   resolved "https://registry.nlark.com/bowser/download/bowser-1.9.4.tgz#890c58a2813a9d3243704334fa81b96a5c150c9a"
   integrity sha1-iQxYooE6nTJDcEM0+oG5alwVDJo=
+=======
+  resolved "https://registry.yarnpkg.com/bowser/-/bowser-1.9.4.tgz#890c58a2813a9d3243704334fa81b96a5c150c9a"
+  integrity sha512-9IdMmj2KjigRq6oWhmwv1W36pDuA4STQZ8q6YO9um+x07xgYNCD3Oou+WP/3L1HNz7iqythGet3/p4wvc8AAwQ==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
 
 brace-expansion@^1.1.7:
   version "1.1.11"
@@ -3034,8 +3059,13 @@ braces@^3.0.1, braces@~3.0.2:
 
 brcast@^3.0.0:
   version "3.0.2"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/brcast/download/brcast-3.0.2.tgz#55c41a7a077ff4e7ac784c2060e544d4c39ad477"
   integrity sha1-VcQaegd/9OeseEwgYOVE1MOa1Hc=
+=======
+  resolved "https://registry.yarnpkg.com/brcast/-/brcast-3.0.2.tgz#55c41a7a077ff4e7ac784c2060e544d4c39ad477"
+  integrity sha512-f5XwwFCCuvgqP2nMH/hJ74FqnGmb4X3D+NC//HphxJzzhsZvSZa+Hk/syB7j3ZHpPDLMoYU8oBgviRWfNvEfKA==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
 
 brorand@^1.0.1, brorand@^1.1.0:
   version "1.1.0"
@@ -3162,8 +3192,13 @@ buffer@^4.3.0:
 
 buffer@^5.0.3:
   version "5.7.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/buffer/download/buffer-5.7.1.tgz?cache=0&sync_timestamp=1606098408652&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fbuffer%2Fdownload%2Fbuffer-5.7.1.tgz#ba62e7c13133053582197160851a8f648e99eed0"
   integrity sha1-umLnwTEzBTWCGXFghRqPZI6Z7tA=
+=======
+  resolved "https://registry.yarnpkg.com/buffer/-/buffer-5.7.1.tgz#ba62e7c13133053582197160851a8f648e99eed0"
+  integrity sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     base64-js "^1.3.1"
     ieee754 "^1.1.13"
@@ -3299,7 +3334,11 @@ camelcase@^6.0.0, camelcase@^6.1.0, camelcase@^6.2.0:
 
 camelize@^1.0.0:
   version "1.0.0"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/camelize/download/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
+=======
+  resolved "https://registry.yarnpkg.com/camelize/-/camelize-1.0.0.tgz#164a5483e630fa4321e5af07020e531831b2609b"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-FkpUg+Yw+kMh5a8HAg5TGDGyYJs=
 
 caniuse-api@^3.0.0:
@@ -3728,12 +3767,21 @@ core-js-pure@^3.0.0:
 
 core-js@3.12.1:
   version "3.12.1"
+<<<<<<< HEAD
   resolved "https://registry.nlark.com/core-js/download/core-js-3.12.1.tgz?cache=0&sync_timestamp=1622278867523&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcore-js%2Fdownload%2Fcore-js-3.12.1.tgz#6b5af4ff55616c08a44d386f1f510917ff204112"
   integrity sha1-a1r0/1VhbAikTThvH1EJF/8gQRI=
 
 core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.nlark.com/core-js/download/core-js-1.2.7.tgz?cache=0&sync_timestamp=1622278867523&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fcore-js%2Fdownload%2Fcore-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
+=======
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.12.1.tgz#6b5af4ff55616c08a44d386f1f510917ff204112"
+  integrity sha512-Ne9DKPHTObRuB09Dru5AjwKjY4cJHVGu+y5f7coGn1E9Grkc3p2iBwE9AI/nJzsE29mQF7oq+mhYYRqOMFN1Bw==
+
+core-js@^1.0.0:
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
 
 core-js@^2.4.0:
@@ -3865,7 +3913,11 @@ css-blank-pseudo@^0.1.4:
 
 css-color-keywords@^1.0.0:
   version "1.0.0"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/css-color-keywords/download/css-color-keywords-1.0.0.tgz#fea2616dc676b2962686b3af8dbdbe180b244e05"
+=======
+  resolved "https://registry.yarnpkg.com/css-color-keywords/-/css-color-keywords-1.0.0.tgz#fea2616dc676b2962686b3af8dbdbe180b244e05"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-/qJhbcZ2spYmhrOvjb2+GAskTgU=
 
 css-color-names@0.0.4, css-color-names@^0.0.4:
@@ -3891,8 +3943,13 @@ css-has-pseudo@^0.10.0:
 
 css-in-js-utils@^2.0.0:
   version "2.0.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/css-in-js-utils/download/css-in-js-utils-2.0.1.tgz#3b472b398787291b47cfe3e44fecfdd9e914ba99"
   integrity sha1-O0crOYeHKRtHz+PkT+z92ekUupk=
+=======
+  resolved "https://registry.yarnpkg.com/css-in-js-utils/-/css-in-js-utils-2.0.1.tgz#3b472b398787291b47cfe3e44fecfdd9e914ba99"
+  integrity sha512-PJF0SpJT+WdbVVt0AOYp9C8GnuruRlL/UFW7932nLWmFLQTaWEzTBQEx7/hn4BuV+WON75iAViSUJLiU3PKbpA==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     hyphenate-style-name "^1.0.2"
     isobject "^3.0.1"
@@ -3948,8 +4005,13 @@ css-select@^2.0.0, css-select@^2.0.2:
 
 css-to-react-native@^2.0.3:
   version "2.3.2"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/css-to-react-native/download/css-to-react-native-2.3.2.tgz?cache=0&sync_timestamp=1570733182465&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fcss-to-react-native%2Fdownload%2Fcss-to-react-native-2.3.2.tgz#e75e2f8f7aa385b4c3611c52b074b70a002f2e7d"
   integrity sha1-514vj3qjhbTDYRxSsHS3CgAvLn0=
+=======
+  resolved "https://registry.yarnpkg.com/css-to-react-native/-/css-to-react-native-2.3.2.tgz#e75e2f8f7aa385b4c3611c52b074b70a002f2e7d"
+  integrity sha512-VOFaeZA053BqvvvqIA8c9n0+9vFppVBAHCp6JgFTtTMU3Mzi+XnelJ9XC9ul3BqFzZyQ5N+H0SnwsWT2Ebchxw==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     camelize "^1.0.0"
     css-color-keywords "^1.0.0"
@@ -4562,8 +4624,13 @@ encodeurl@~1.0.2:
 
 encoding@^0.1.11:
   version "0.1.13"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/encoding/download/encoding-0.1.13.tgz?cache=0&sync_timestamp=1594362928442&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fencoding%2Fdownload%2Fencoding-0.1.13.tgz#56574afdd791f54a8e9b2785c0582a2d26210fa9"
   integrity sha1-VldK/deR9UqOmyeFwFgqLSYhD6k=
+=======
+  resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.13.tgz#56574afdd791f54a8e9b2785c0582a2d26210fa9"
+  integrity sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     iconv-lite "^0.6.2"
 
@@ -5177,8 +5244,13 @@ fast-levenshtein@^2.0.6, fast-levenshtein@~2.0.6:
 
 fast-memoize@^2.2.7:
   version "2.5.2"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/fast-memoize/download/fast-memoize-2.5.2.tgz#79e3bb6a4ec867ea40ba0e7146816f6cdce9b57e"
   integrity sha1-eeO7ak7IZ+pAug5xRoFvbNzptX4=
+=======
+  resolved "https://registry.yarnpkg.com/fast-memoize/-/fast-memoize-2.5.2.tgz#79e3bb6a4ec867ea40ba0e7146816f6cdce9b57e"
+  integrity sha512-Ue0LwpDYErFbmNnZSF0UH6eImUwDmogUO1jyE+JbN2gsQz/jICm1Ve7t9QT0rNSsfJt+Hs4/S3GnsDVjL4HVrw==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
 
 fastq@^1.6.0:
   version "1.10.1"
@@ -5203,7 +5275,11 @@ fb-watchman@^2.0.0:
 
 fbjs@^0.8.12, fbjs@^0.8.9:
   version "0.8.17"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/fbjs/download/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
+=======
+  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
   dependencies:
     core-js "^1.0.0"
@@ -5537,8 +5613,13 @@ getpass@^0.1.1:
 
 glamor@^2.20.40:
   version "2.20.40"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/glamor/download/glamor-2.20.40.tgz#f606660357b7cf18dface731ad1a2cfa93817f05"
   integrity sha1-9gZmA1e3zxjfrOcxrRos+pOBfwU=
+=======
+  resolved "https://registry.yarnpkg.com/glamor/-/glamor-2.20.40.tgz#f606660357b7cf18dface731ad1a2cfa93817f05"
+  integrity sha512-DNXCd+c14N9QF8aAKrfl4xakPk5FdcFwmH7sD0qnC0Pr7xoZ5W9yovhUrY/dJc3psfGGXC58vqQyRtuskyUJxA==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     fbjs "^0.8.12"
     inline-style-prefixer "^3.0.6"
@@ -5548,8 +5629,13 @@ glamor@^2.20.40:
 
 glamorous@^4.11.2:
   version "4.13.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/glamorous/download/glamorous-4.13.1.tgz#8909afcbc7f09133c6eb26bedcc1250c1f774312"
   integrity sha1-iQmvy8fwkTPG6ya+3MElDB93QxI=
+=======
+  resolved "https://registry.yarnpkg.com/glamorous/-/glamorous-4.13.1.tgz#8909afcbc7f09133c6eb26bedcc1250c1f774312"
+  integrity sha512-x9yCGlRrPEkHF63m+WoZXHnpSet5ipS/fxczx5ic0ZKPPd2mMDyCZ0iEhse49OFlag0yxbJTc7k/L0g1GCmCYQ==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     brcast "^3.0.0"
     csstype "^2.2.0"
@@ -5693,7 +5779,11 @@ harmony-reflect@^1.4.6:
 
 has-flag@^1.0.0:
   version "1.0.0"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/has-flag/download/has-flag-1.0.0.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fhas-flag%2Fdownload%2Fhas-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
+=======
+  resolved "https://registry.yarnpkg.com/has-flag/-/has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-nZ55MWXOAXoA8AQYxD+UKnsdEfo=
 
 has-flag@^3.0.0:
@@ -5799,7 +5889,11 @@ hmac-drbg@^1.0.1:
 
 hoist-non-react-statics@^1.2.0:
   version "1.2.0"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/hoist-non-react-statics/download/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
+=======
+  resolved "https://registry.yarnpkg.com/hoist-non-react-statics/-/hoist-non-react-statics-1.2.0.tgz#aa448cf0986d55cc40773b17174b7dd066cb7cfb"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-qkSM8JhtVcxAdzsXF0t90GbLfPs=
 
 hoist-non-react-statics@^3.1.0, hoist-non-react-statics@^3.2.0, hoist-non-react-statics@^3.3.0, hoist-non-react-statics@^3.3.2:
@@ -5846,8 +5940,13 @@ html-comment-regex@^1.1.0:
 
 html-element-attributes@^1.0.0:
   version "1.3.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/html-element-attributes/download/html-element-attributes-1.3.1.tgz#9fa6a2e37e6b61790a303e87ddbbb9746e8c035f"
   integrity sha1-n6ai435rYXkKMD6H3bu5dG6MA18=
+=======
+  resolved "https://registry.yarnpkg.com/html-element-attributes/-/html-element-attributes-1.3.1.tgz#9fa6a2e37e6b61790a303e87ddbbb9746e8c035f"
+  integrity sha512-UrRKgp5sQmRnDy4TEwAUsu14XBUlzKB8U3hjIYDjcZ3Hbp86Jtftzxfgrv6E/ii/h78tsaZwAnAE8HwnHr0dPA==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
 
 html-encoding-sniffer@^2.0.1:
   version "2.0.1"
@@ -5881,8 +5980,13 @@ html-minifier-terser@^5.0.1:
 
 html-tag-names@^1.1.1:
   version "1.1.5"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/html-tag-names/download/html-tag-names-1.1.5.tgz#f537420c16769511283f8ae1681785fbc89ee0a9"
   integrity sha1-9TdCDBZ2lREoP4rhaBeF+8ie4Kk=
+=======
+  resolved "https://registry.yarnpkg.com/html-tag-names/-/html-tag-names-1.1.5.tgz#f537420c16769511283f8ae1681785fbc89ee0a9"
+  integrity sha512-aI5tKwNTBzOZApHIynaAwecLBv8TlZTEy/P4Sj2SzzAhBrGuI8yGZ0UIXVPQzOHGS+to2mjb04iy6VWt/8+d8A==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
 
 html-webpack-plugin@4.5.0:
   version "4.5.0"
@@ -6005,8 +6109,13 @@ iconv-lite@0.4.24:
 
 iconv-lite@^0.6.2:
   version "0.6.3"
+<<<<<<< HEAD
   resolved "https://registry.nlark.com/iconv-lite/download/iconv-lite-0.6.3.tgz?cache=0&sync_timestamp=1621826342262&other_urls=https%3A%2F%2Fregistry.nlark.com%2Ficonv-lite%2Fdownload%2Ficonv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
   integrity sha1-pS+AvzjaGVLrXGgXkHGYcaGnJQE=
+=======
+  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
+  integrity sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     safer-buffer ">= 2.1.2 < 3.0.0"
 
@@ -6152,7 +6261,11 @@ ini@^1.3.5:
 
 inline-style-prefixer@^3.0.6:
   version "3.0.8"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/inline-style-prefixer/download/inline-style-prefixer-3.0.8.tgz#8551b8e5b4d573244e66a34b04f7d32076a2b534"
+=======
+  resolved "https://registry.yarnpkg.com/inline-style-prefixer/-/inline-style-prefixer-3.0.8.tgz#8551b8e5b4d573244e66a34b04f7d32076a2b534"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-hVG45bTVcyROZqNLBPfTIHaitTQ=
   dependencies:
     bowser "^1.7.3"
@@ -6160,8 +6273,13 @@ inline-style-prefixer@^3.0.6:
 
 inline-style-prefixer@^4.0.0:
   version "4.0.2"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/inline-style-prefixer/download/inline-style-prefixer-4.0.2.tgz#d390957d26f281255fe101da863158ac6eb60911"
   integrity sha1-05CVfSbygSVf4QHahjFYrG62CRE=
+=======
+  resolved "https://registry.yarnpkg.com/inline-style-prefixer/-/inline-style-prefixer-4.0.2.tgz#d390957d26f281255fe101da863158ac6eb60911"
+  integrity sha512-N8nVhwfYga9MiV9jWlwfdj1UDIaZlBFu4cJSJkIr7tZX7sHpHhGR5su1qdpW+7KPL8ISTvCIkcaFi/JdBknvPg==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     bowser "^1.7.3"
     css-in-js-utils "^2.0.0"
@@ -6370,8 +6488,13 @@ is-fullwidth-code-point@^3.0.0:
 
 is-function@^1.0.1:
   version "1.0.2"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/is-function/download/is-function-1.0.2.tgz#4f097f30abf6efadac9833b17ca5dc03f8144e08"
   integrity sha1-Twl/MKv2762smDOxfKXcA/gUTgg=
+=======
+  resolved "https://registry.yarnpkg.com/is-function/-/is-function-1.0.2.tgz#4f097f30abf6efadac9833b17ca5dc03f8144e08"
+  integrity sha512-lw7DUp0aWXYg+CBCN+JKkcE0Q2RayZnSvnZBlwgxHBQhqt5pZNVy4Ri7H9GmmXkdu7LUthszM+Tor1u/2iBcpQ==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
 
 is-generator-fn@^2.0.0:
   version "2.1.0"
@@ -6568,7 +6691,11 @@ isobject@^3.0.0, isobject@^3.0.1:
 
 isomorphic-fetch@^2.1.1:
   version "2.2.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/isomorphic-fetch/download/isomorphic-fetch-2.2.1.tgz?cache=0&sync_timestamp=1600844665232&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fisomorphic-fetch%2Fdownload%2Fisomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+=======
+  resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-YRrhrPFPXoH3KVB0coGf6XM1WKk=
   dependencies:
     node-fetch "^1.0.1"
@@ -7970,8 +8097,13 @@ no-case@^3.0.4:
 
 node-fetch@^1.0.1:
   version "1.7.3"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/node-fetch/download/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
   integrity sha1-mA9vcthSEaU0fGsrwYxbhMPrR+8=
+=======
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
+  integrity sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     encoding "^0.1.11"
     is-stream "^1.0.1"
@@ -8081,7 +8213,11 @@ normalize-url@^3.0.0:
 
 normalize.css@^7.0.0:
   version "7.0.0"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/normalize.css/download/normalize.css-7.0.0.tgz#abfb1dd82470674e0322b53ceb1aaf412938e4bf"
+=======
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-7.0.0.tgz#abfb1dd82470674e0322b53ceb1aaf412938e4bf"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-q/sd2CRwZ04DIrU86xqvQSk45L8=
 
 npm-run-path@^2.0.0:
@@ -9378,8 +9514,13 @@ promise-inflight@^1.0.1:
 
 promise@^7.1.1:
   version "7.3.1"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/promise/download/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
   integrity sha1-BktyYCsY+Q8pGSuLG8QY/9Hr078=
+=======
+  resolved "https://registry.yarnpkg.com/promise/-/promise-7.3.1.tgz#064b72602b18f90f29192b8b1bc418ffd1ebd3bf"
+  integrity sha512-nolQXZ/4L+bP/UGlkfaIujX9BKxGwmQ9OT4mOt5yvy8iK1h3wqTEJCijzGANTCCl9nWjY41juyAn2K3Q1hLLTg==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     asap "~2.0.3"
 
@@ -9616,8 +9757,13 @@ react-display-name@^0.2.4:
 
 react-dom@^16.2.0:
   version "16.14.0"
+<<<<<<< HEAD
   resolved "https://registry.nlark.com/react-dom/download/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
   integrity sha1-etg47Cmnd/s8dcOhkPZhz5Kri4k=
+=======
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.14.0.tgz#7ad838ec29a777fb3c75c3a190f661cf92ab8b89"
+  integrity sha512-1gCeQXDLoIqMgqD3IO2Ah9bnf0w9kzhwN5q4FGnHZ67hBm9yePzB5JJAIQCc8x3pFnNlwFq4RidZggNAAkzWWw==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -9640,8 +9786,13 @@ react-error-overlay@^6.0.9:
 
 react-html-attributes@^1.4.2:
   version "1.4.6"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/react-html-attributes/download/react-html-attributes-1.4.6.tgz#9558b56bb81c60f6cee9ae7d5e97434a59c086ff"
   integrity sha1-lVi1a7gcYPbO6a59XpdDSlnAhv8=
+=======
+  resolved "https://registry.yarnpkg.com/react-html-attributes/-/react-html-attributes-1.4.6.tgz#9558b56bb81c60f6cee9ae7d5e97434a59c086ff"
+  integrity sha512-uS3MmThNKFH2EZUQQw4k5pIcU7XIr208UE5dktrj/GOH1CMagqxDl4DCLpt3o2l9x+IB5nVYBeN3Cr4IutBXAg==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     html-element-attributes "^1.0.0"
 
@@ -9779,8 +9930,13 @@ react-scripts@4.0.3:
 
 react-split-pane@^2.0.3:
   version "2.0.3"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/react-split-pane/download/react-split-pane-2.0.3.tgz#2a4d01ecc6fbba4328fe12139daa8c4a9a6eaa7c"
   integrity sha1-Kk0B7Mb7ukMo/hITnaqMSppuqnw=
+=======
+  resolved "https://registry.yarnpkg.com/react-split-pane/-/react-split-pane-2.0.3.tgz#2a4d01ecc6fbba4328fe12139daa8c4a9a6eaa7c"
+  integrity sha512-1rW+EMSJTkS7eYMYethCaNFOjiAVDm/B2LlxJXLr1Uu8ddLrV9pfc5P/fngRBkTGC/0tvxRkW1dLxGY7zvHVkA==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     glamor "^2.20.40"
     glamorous "^4.11.2"
@@ -9815,8 +9971,13 @@ react-virtual@2.7.1:
 
 react@^16.2.0:
   version "16.14.0"
+<<<<<<< HEAD
   resolved "https://registry.nlark.com/react/download/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
   integrity sha1-lNd23dCqo32j7aj8W2sYpMmjEU0=
+=======
+  resolved "https://registry.yarnpkg.com/react/-/react-16.14.0.tgz#94d776ddd0aaa37da3eda8fc5b6b18a4c9a3114d"
+  integrity sha512-0X2CImDkJGApiAlcf0ODKIneSwBPhqJawOa5wCtKbu7ZECrmS26NvtSILynQ66cgkT/RJ4LidJOc3bUESwmU8g==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -10348,8 +10509,13 @@ saxes@^5.0.0:
 
 scheduler@^0.19.1:
   version "0.19.1"
+<<<<<<< HEAD
   resolved "https://registry.nlark.com/scheduler/download/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
   integrity sha1-Tz4u0sGn1laB9MhU+oxaHMtA8ZY=
+=======
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.19.1.tgz#4f3e2ed2c1a7d65681f4c854fa8c5a1ccb40f196"
+  integrity sha512-n/zwRWRYSUj0/3g/otKDRPMh6qv2SYMWNq85IEa8iZyAv8od9zDYpGSnpBEjNgcMNq6Scbu5KfIPxNF72R/2EA==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
@@ -11037,7 +11203,11 @@ style-loader@1.3.0:
 
 styled-components@^2.4.0:
   version "2.4.1"
+<<<<<<< HEAD
   resolved "https://registry.nlark.com/styled-components/download/styled-components-2.4.1.tgz#663bd0485d4b6ab46f946210dc03d2398d1ade74"
+=======
+  resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-2.4.1.tgz#663bd0485d4b6ab46f946210dc03d2398d1ade74"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-ZjvQSF1LarRvlGIQ3APSOY0a3nQ=
   dependencies:
     buffer "^5.0.3"
@@ -11060,12 +11230,21 @@ stylehacks@^4.0.0:
 
 stylis@^3.4.0:
   version "3.5.4"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/stylis/download/stylis-3.5.4.tgz#f665f25f5e299cf3d64654ab949a57c768b73fbe"
   integrity sha1-9mXyX14pnPPWRlSrlJpXx2i3P74=
 
 supports-color@^3.2.3:
   version "3.2.3"
   resolved "https://registry.nlark.com/supports-color/download/supports-color-3.2.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.nlark.com%2Fsupports-color%2Fdownload%2Fsupports-color-3.2.3.tgz#65ac0504b3954171d8a64946b2ae3cbb8a5f54f6"
+=======
+  resolved "https://registry.yarnpkg.com/stylis/-/stylis-3.5.4.tgz#f665f25f5e299cf3d64654ab949a57c768b73fbe"
+  integrity sha512-8/3pSmthWM7lsPBKv7NXkzn2Uc9W7NotcwGNpJaa3k7WMM1XDCA4MgT5k/8BIexd5ydZdboXtU90XH9Ec4Bv/Q==
+
+supports-color@^3.2.3:
+  version "3.2.3"
+  resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-3.2.3.tgz#65ac0504b3954171d8a64946b2ae3cbb8a5f54f6"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-ZawFBLOVQXHYpklGsq48u4pfVPY=
   dependencies:
     has-flag "^1.0.0"
@@ -11106,8 +11285,13 @@ svg-parser@^2.0.2:
 
 svg-tag-names@^1.1.0:
   version "1.1.2"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/svg-tag-names/download/svg-tag-names-1.1.2.tgz#aa785b58ce35e725a65758f7e436924dc79be9ce"
   integrity sha1-qnhbWM415yWmV1j35DaSTceb6c4=
+=======
+  resolved "https://registry.yarnpkg.com/svg-tag-names/-/svg-tag-names-1.1.2.tgz#aa785b58ce35e725a65758f7e436924dc79be9ce"
+  integrity sha512-LIDOy8NRLGfJegTEnpizWA/ofg3Gyx58JgPEEjvATFciUJW9dHZ2aPTYY0Mn2rQYCeUGZElpHfu91OcWK0IMIw==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
 
 svgo@^1.0.0, svgo@^1.2.2:
   version "1.3.2"
@@ -11274,7 +11458,11 @@ through2@^2.0.0:
 
 through@^2.3.8:
   version "2.3.8"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/through/download/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+=======
+  resolved "https://registry.yarnpkg.com/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
   integrity sha1-DdTJ/6q8NXlgsbckEV1+Doai4fU=
 
 thunky@^1.0.2:
@@ -11505,8 +11693,13 @@ typedarray@^0.0.6:
 
 ua-parser-js@^0.7.18:
   version "0.7.28"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/ua-parser-js/download/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
   integrity sha1-i6BOZT81ziECOcZGYWhb+RId7DE=
+=======
+  resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
+  integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
@@ -11944,8 +12137,13 @@ whatwg-encoding@^1.0.5:
 
 whatwg-fetch@>=0.10.0:
   version "3.6.2"
+<<<<<<< HEAD
   resolved "https://registry.npm.taobao.org/whatwg-fetch/download/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
   integrity sha1-3O0k838mJO0CgXJdUdDi4/5nf4w=
+=======
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
+  integrity sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==
+>>>>>>> 23e36746d25bef37fda36c89e112b1a962e64161
 
 whatwg-fetch@^3.4.1:
   version "3.6.1"
