@@ -987,22 +987,22 @@ export const WCHeader = (props) => {
         />
       </FilterGroupItem>
       <FilterGroupItem label="BHL Latitude">
-        <Input icon={<Icon name="value-help" />} placeholder="" />
+        <Input placeholder="" />
       </FilterGroupItem>
       <FilterGroupItem label="BHL Longitude">
-        <Input icon={<Icon name="value-help" />} placeholder="" />
+        <Input placeholder="" />
       </FilterGroupItem>
       <FilterGroupItem label="Company">
-        <Input
-          icon={<Icon name="value-help" onClick={props.handleValueHelp} />}
-          placeholder=""
-        />
+        <MultiComboBox required>
+          <MultiComboBoxItem text="Google" />
+          <MultiComboBoxItem text="TCS" />
+          <MultiComboBoxItem text="Tecnics" />
+          <MultiComboBoxItem text="Wipro" />
+          <MultiComboBoxItem text="Infosys" />
+        </MultiComboBox>
       </FilterGroupItem>
       <FilterGroupItem label="Cost Center">
-        <Input
-          icon={<Icon name="value-help" onClick={props.handleValueHelp} />}
-          placeholder=""
-        />
+        <Input placeholder="" />
       </FilterGroupItem>
       <FilterGroupItem label="County">
         <MultiComboBox required>
@@ -1051,10 +1051,10 @@ export const WCHeader = (props) => {
         />
       </FilterGroupItem>
       <FilterGroupItem label="SHL Latitude">
-        <Input icon={<Icon name="value-help" />} placeholder="" />
+        <Input placeholder="" />
       </FilterGroupItem>
       <FilterGroupItem label="SHL Longitude">
-        <Input icon={<Icon name="value-help" />} placeholder="" />
+        <Input placeholder="" />
       </FilterGroupItem>
       <FilterGroupItem label="State">
         <MultiComboBox required>
@@ -1084,16 +1084,10 @@ export const WCHeader = (props) => {
         />
       </FilterGroupItem>
       <FilterGroupItem label="Well Class">
-        <Input
-          icon={<Icon name="value-help" onClick={props.handleValueHelp} />}
-          placeholder=""
-        />
+        <Input />
       </FilterGroupItem>
       <FilterGroupItem label="Well Status">
-        <Input
-          icon={<Icon name="value-help" onClick={props.handleValueHelp} />}
-          placeholder=""
-        />
+        <Input />
       </FilterGroupItem>
     </FilterBar>
   );
