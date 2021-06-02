@@ -25,10 +25,16 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 export const WCValueHelperDialog = (props) => {
+  const [loading, setLoading] = React.useState(false);
   const handleClose = () => {
     props.dialogRef.current.close();
   };
-
+  const handleGo = (event) => {
+    setLoading((value) => !value);
+    setTimeout(() => {
+      setLoading((value) => !value);
+    }, 3000);
+  };
   return (
     <>
       {ReactDOM.createPortal(
@@ -57,57 +63,13 @@ export const WCValueHelperDialog = (props) => {
                 showFilterConfiguration={false}
                 showGoOnFB
                 hideToggleFiltersButton
+                onGo={handleGo}
               >
                 {props.queryHelperMeta.map((fieldMeta) => (
                   <FilterGroupItem label={fieldMeta.label}>
                     <Input placeholder="" />
                   </FilterGroupItem>
                 ))}
-                {/* <FilterGroupItem label="Well Number">
-              <Input placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Well Completion">
-              <Input placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="WC Name">
-              <Input placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="API Well Number">
-              <Input placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="API WC Number">
-              <Input placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="WC Type">
-              <Select>
-                <Option>LI</Option>
-                <Option>OH</Option>
-              </Select>
-            </FilterGroupItem>
-            <FilterGroupItem label={"State"}>
-              <MultiComboBox required>
-                <MultiComboBoxItem text="California" />
-                <MultiComboBoxItem text="Texas" />
-                <MultiComboBoxItem text="Florida" />
-                <MultiComboBoxItem text="Alaska" />
-                <MultiComboBoxItem text="Georgia" />
-              </MultiComboBox>
-            </FilterGroupItem>
-            <FilterGroupItem label={"County"}>
-              <MultiComboBox required>
-                <MultiComboBoxItem text="USA" />
-                <MultiComboBoxItem text="India" />
-                <MultiComboBoxItem text="China" />
-                <MultiComboBoxItem text="Japan" />
-                <MultiComboBoxItem text="Iraq" />
-              </MultiComboBox>
-            </FilterGroupItem>
-            <FilterGroupItem label={"WC Xref1"}>
-              <Input />
-            </FilterGroupItem>
-            <FilterGroupItem label={"WC Xref2"}>
-              <Input />
-            </FilterGroupItem> */}
               </FilterBar>
 
               <Grid container justify="space-between" style={{ height: "90%" }}>
@@ -118,6 +80,7 @@ export const WCValueHelperDialog = (props) => {
                     </Title>
 
                     <Table
+                      busy={loading}
                       columns={
                         <>
                           <TableColumn>
