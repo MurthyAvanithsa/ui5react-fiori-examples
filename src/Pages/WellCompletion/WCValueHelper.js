@@ -19,6 +19,8 @@ import {
   TableRow,
   Title,
   Token,
+  Select,
+  Option,
 } from "@ui5/webcomponents-react";
 import { spacing } from "@ui5/webcomponents-react-base";
 import React from "react";
@@ -58,11 +60,45 @@ export const WCValueHelperDialog = (props) => {
                 showGoOnFB
                 // hideToggleFiltersButton
               >
-                {props.queryHelperMeta.map((fieldMeta) => (
-                  <FilterGroupItem label={fieldMeta.label}>
-                    <Input placeholder="" />
-                  </FilterGroupItem>
-                ))}
+                {props.queryHelperMeta.map((field, index) => {
+                  if (field.drop_down || field.isCheckbox) {
+                    return (
+                      <FilterGroupItem
+                        label={field.label}
+                        key={`${index}-'field`}
+                      >
+                        {/* {field.selectOptions.map((option) => {
+                            console.log("field.selectOptions", option);
+                            <Option>{option}</Option>;
+                          })} */}
+                        <Select>
+                          <Option>Yes</Option>
+                          <Option>No</Option>
+                        </Select>
+                      </FilterGroupItem>
+                    );
+                  } else {
+                    return (
+                      <FilterGroupItem
+                        label={field.label}
+                        key={`${index}-field`}
+                      >
+                        <Input />
+                      </FilterGroupItem>
+                    );
+                  }
+                })}
+                {/* {props.queryHelperMeta.map((fieldMeta) => {
+                  if (fieldMeta.drop_down) {
+                    <FilterGroupItem label={fieldMeta.label}>
+                      <Select />
+                    </FilterGroupItem>;
+                  } else {
+                    <FilterGroupItem label={fieldMeta.label}>
+                      <Input />
+                    </FilterGroupItem>;
+                  }
+                })} */}
                 {/* <FilterGroupItem label="Well Number">
               <Input placeholder="" />
             </FilterGroupItem>
