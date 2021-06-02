@@ -12,14 +12,37 @@ import {
   Input,
   VariantManagement,
 } from "@ui5/webcomponents-react";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import { WCHeader } from "./WCHeader";
 import { WellCompletionTable } from "./WCResults";
 import { WCValueHelperDialog } from "./WCValueHelper";
+import { QueryInput } from '../Components/QueryInput';
+import ValueHelperMetaData from '../Components/ValueHelperMetaData';
+import ValueHelperDialog from '../Components/ValueHelper'
 
 export const WellCompletion = () => {
   const dialogRef = useRef(null);
+  
+  const [MetaData, setMetaData] = useState([]);
+
+    React.useEffect(() => {
+        fetch('http://cc.tecnicslabs.com/api/meta_data/?screen_name=well_completion_meta&object_type=[%27WELL_COMPLETION%27,%27WC_DATED%27]')
+            .then(results => results.json())
+            .then(data => {
+                console.log("apiData", data)
+                setMetaData(data['well_completion_meta']['form_meta_data'])
+            })
+    }, [])
+  // console.log("metaData", MetaData)
+
+
+  React.useEffect(()=>{
+    return() => {
+      // console.log("changed")
+    }
+  },[MetaData])
+  
   const handleOpen = (e) => {
     dialogRef.current.open();
   };
@@ -127,84 +150,18 @@ export const WellCompletion = () => {
             showFilterConfiguration
             hideToggleFiltersButton //(Hides "Hide Filter Bar" button) This is not working, don't know why
           >
-            <FilterGroupItem label="Well Number">
-              <Input
-                icon={<Icon name="value-help" onClick={handleOpen} />}
-                placeholder=""
-              />
-            </FilterGroupItem>
-            <FilterGroupItem label="Well Completion">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="WC Name">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="API Well Number">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="API WC Number">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="BHL Latitude">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="BHL Longitude">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Company">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Cost Center">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="County">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="DOI">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Major Product">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Operated">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Operator">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Primary DOI">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Property">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Rep Well Count">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="SHL Latitude">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="SHL Longitude">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="State">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="WC Type">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="WC Xref 1">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="WC Xref 2">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Well Class">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
-            <FilterGroupItem label="Well Status">
-              <Input icon={<Icon name="value-help" />} placeholder="" />
-            </FilterGroupItem>
+            {
+              MetaData.map((FieldMetaData, Index) => (
+
+                <FilterGroupItem label={FieldMetaData.label} key={`${Index}-FieldMeta`}>
+                  <QueryInput FieldMetaData = {FieldMetaData}
+                              openValueHelper = {handleOpen}>
+                               
+                  </QueryInput>
+                </FilterGroupItem>
+              ))
+            }             
+            
           </FilterBar>
         </DynamicPageHeader>
       }
@@ -213,7 +170,14 @@ export const WellCompletion = () => {
       }}
     >
       <WellCompletionTable />
-      <WCValueHelperDialog dialogRef={dialogRef} />
+      {/* <WCValueHelperDialog dialogRef={dialogRef} /> */}
+      <ValueHelperDialog 
+                                        dialogRef= {dialogRef}
+                                        ValueHelperMetaData = {ValueHelperMetaData}
+                                        >
+                                </ValueHelperDialog>
+      
+      
     </DynamicPage>
   );
 };

@@ -26,6 +26,7 @@ import { Grid } from "@material-ui/core";
 import { spacing } from "@ui5/webcomponents-react-base";
 
 export const WCValueHelperDialog = (props) => {
+  // console.log("prop", props)
   const handleClose = () => {
     props.dialogRef.current.close();
   };
