@@ -58,7 +58,7 @@ export const WellCompletion = () => {
         >
           <WellCompletionTable />
         </div>
-        <WCValueHelperDialog dialogRef={dialogRef} />
+        {/* <WCValueHelperDialog dialogRef={dialogRef} /> */}
       </DynamicPage>
     </FlexBox>
   );

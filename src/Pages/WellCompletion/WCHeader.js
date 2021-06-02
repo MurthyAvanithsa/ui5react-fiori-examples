@@ -9,8 +9,391 @@ import {
   Option,
   Select,
 } from "@ui5/webcomponents-react";
+import { QueryInput } from "./QueryInput";
 
 export const WCHeader = (props) => {
+  const wellCompletionValueHelperMeta = [
+    {
+      name: "well_number",
+      label: "Well Number",
+      seqNo: "1",
+      length: "15",
+      dataType: "char",
+      fieldKey: "wl_no",
+      keyField: true,
+      drop_down: false,
+      isComment: false,
+      isCheckbox: false,
+      description: "Well Number",
+      isSingleInput: false,
+      keyFieldParms: "key_field=Well Completion&display_first=[wl_no]",
+      modelGridData: null,
+      fieldKeyInStore: "wellNumber",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "well_completion",
+      label: "Well Completion",
+      seqNo: "2",
+      length: "14",
+      dataType: "char",
+      fieldKey: "wc_no",
+      keyField: true,
+      drop_down: false,
+      isComment: false,
+      isCheckbox: false,
+      description: "Well Completion Number",
+      isSingleInput: false,
+      keyFieldParms: "key_field=Well Completion&display_first=[wl_no, wc_no]",
+      modelGridData: null,
+      fieldKeyInStore: "wellCompletion",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "wc_name",
+      label: "WC Name",
+      seqNo: "3",
+      length: "35",
+      dataType: "char",
+      fieldKey: "wc_de",
+      keyField: true,
+      drop_down: false,
+      isComment: false,
+      isCheckbox: false,
+      description: "Well Completion Name",
+      isSingleInput: false,
+      keyFieldParms: "key_field=Well Completion&display_first=[wl_no, wc_de]",
+      modelGridData: null,
+      fieldKeyInStore: "wcName",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "api_well_number",
+      label: "API Well Number",
+      seqNo: "4",
+      length: "12",
+      dataType: "char",
+      fieldKey: "api_well_no",
+      keyField: true,
+      drop_down: false,
+      isComment: false,
+      isCheckbox: false,
+      description: "API Well Number",
+      isSingleInput: false,
+      keyFieldParms:
+        "key_field=Well Completion&display_first=[wl_no, api_well_no]",
+      modelGridData: null,
+      fieldKeyInStore: "apiWellNumber",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "api_wc_number",
+      label: "API WC Number",
+      seqNo: "5",
+      length: "3",
+      dataType: "char",
+      fieldKey: "api_wc_no",
+      keyField: true,
+      drop_down: false,
+      isComment: false,
+      isCheckbox: false,
+      description: "API Well Completion Number",
+      isSingleInput: false,
+      keyFieldParms:
+        "key_field=Well Completion&display_first=[wl_no, api_wc_no]",
+      modelGridData: null,
+      fieldKeyInStore: "apiWcNumber",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "wc_type",
+      label: "WC Type",
+      seqNo: "6",
+      length: "2",
+      dataType: "char",
+      fieldKey: "wc_type",
+      keyField: true,
+      drop_down: true,
+      isComment: false,
+      isCheckbox: false,
+      description: "Well Completion Type",
+      isSingleInput: false,
+      keyFieldParms:
+        "key_field=Well Completion&display_first=['wl_no', 'wc_type']",
+      modelGridData: null,
+      fieldKeyInStore: "wcType",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "state",
+      label: "State",
+      seqNo: "7",
+      length: "2",
+      dataType: "char",
+      fieldKey: "pri_geo_loc",
+      keyField: true,
+      drop_down: true,
+      isComment: false,
+      isCheckbox: false,
+      description: "Primary Geographic Location",
+      isSingleInput: false,
+      keyFieldParms: "country_code=",
+      modelGridData: null,
+      fieldKeyInStore: "state",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/division-order/state_list/",
+    },
+    {
+      name: "county",
+      label: "County",
+      seqNo: "8",
+      length: "50",
+      dataType: "char",
+      fieldKey: "sec_geo_loc",
+      keyField: true,
+      drop_down: true,
+      isComment: false,
+      isCheckbox: false,
+      description: "Secondary Geographic Location",
+      isSingleInput: false,
+      keyFieldParms: "state_list=",
+      modelGridData: null,
+      fieldKeyInStore: "county",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/division-order/county_list/",
+    },
+    {
+      name: "wc_xref_1",
+      label: "WC Xref 1",
+      seqNo: "12",
+      length: "20",
+      dataType: "char",
+      fieldKey: "wc_xref1",
+      keyField: true,
+      drop_down: false,
+      isComment: false,
+      isCheckbox: false,
+      description: "WC Cross Reference 1",
+      isSingleInput: false,
+      keyFieldParms:
+        "key_field=Well Completion&display_first=[wl_no, wc_xref1]",
+      modelGridData: null,
+      fieldKeyInStore: "wcXref1",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "wc_xref_2",
+      label: "WC Xref 2",
+      seqNo: "13",
+      length: "20",
+      dataType: "char",
+      fieldKey: "wc_xref2",
+      keyField: true,
+      drop_down: false,
+      isComment: false,
+      isCheckbox: false,
+      description: "WC Cross Reference 2",
+      isSingleInput: false,
+      keyFieldParms:
+        "key_field=Well Completion&display_first=[wl_no, wc_xref2]",
+      modelGridData: null,
+      fieldKeyInStore: "wcXref2",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+  ];
+  const propertyValueHelperMeta = [
+    {
+      name: "property",
+      label: "Property",
+      seqNo: "1",
+      length: "8",
+      dataType: "char",
+      fieldKey: "pr_no",
+      keyField: true,
+      isComment: false,
+      isCheckbox: false,
+      description: "Property Number",
+      isSingleInput: false,
+      keyFieldParms: "key_field=Division Order Property",
+      modelGridData: null,
+      fieldKeyInStore: "propertyNumber",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "property_name",
+      label: "Property Name",
+      seqNo: "2",
+      length: "35",
+      dataType: "char",
+      fieldKey: "pr_nm",
+      keyField: false,
+      isComment: false,
+      isCheckbox: false,
+      description: "Property Name",
+      isSingleInput: false,
+      keyFieldParms: "key_field=Division Order Property",
+      modelGridData: null,
+      fieldKeyInStore: "propeertyName",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "property_type",
+      label: "Property Type",
+      seqNo: "4",
+      length: "10",
+      dataType: "char",
+      fieldKey: "pr_type",
+      keyField: true,
+      isComment: false,
+      isCheckbox: false,
+      description: "Property Type",
+      isSingleInput: false,
+      keyFieldParms:
+        "key_field=Division Order Property&display_first=['pr_no', 'pr_type']",
+      modelGridData: null,
+      fieldKeyInStore: "propertyType",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "state",
+      label: "State",
+      seqNo: "6",
+      length: "45",
+      dataType: "char",
+      fieldKey: "state_code",
+      keyField: true,
+      isComment: false,
+      isCheckbox: false,
+      description: "State",
+      isSingleInput: false,
+      keyFieldParms: "country_name=",
+      modelGridData: null,
+      fieldKeyInStore: "state",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/division-order/state_list/",
+    },
+    {
+      name: "county",
+      label: "County",
+      seqNo: "7",
+      length: "100",
+      dataType: "char",
+      fieldKey: "county",
+      keyField: true,
+      isComment: false,
+      isCheckbox: false,
+      description: "County",
+      isSingleInput: false,
+      keyFieldParms: "state=",
+      modelGridData: null,
+      fieldKeyInStore: "county",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "api/division-order/county_list/",
+    },
+    {
+      name: "property_xref1",
+      label: "Property Xref1",
+      seqNo: "8",
+      length: "20",
+      dataType: "char",
+      fieldKey: "pr_xref1",
+      keyField: true,
+      isComment: false,
+      isCheckbox: false,
+      description: "Property Cross Reference 1",
+      isSingleInput: false,
+      keyFieldParms:
+        "key_field=Division Order Property&display_first=['pr_no', 'pr_xref1', 'pr_xref2']",
+      modelGridData: null,
+      fieldKeyInStore: "propertyXref1",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "product_xref2",
+      label: "Product Xref2",
+      seqNo: "9",
+      length: "20",
+      dataType: "char",
+      fieldKey: "pr_xref2",
+      keyField: true,
+      isComment: false,
+      isCheckbox: false,
+      description: "Property Cross Reference 1",
+      isSingleInput: false,
+      keyFieldParms:
+        "key_field=Division Order Property&display_first=['pr_no', 'pr_xref2', 'pr_xref1']",
+      modelGridData: null,
+      fieldKeyInStore: "productXref2",
+      modelGridHeaders: null,
+      keyFieldSearchURL: "/api/cc/keyfield/",
+    },
+    {
+      name: "unit_property",
+      label: "Unit Property",
+      seqNo: "10",
+      length: "1",
+      dataType: "char",
+      fieldKey: "unit_fl",
+      keyField: false,
+      isComment: false,
+      isCheckbox: true,
+      description: "Unit Property Flag",
+      isSingleInput: false,
+      keyFieldParms: null,
+      modelGridData: null,
+      fieldKeyInStore: "unitProptery",
+      modelGridHeaders: null,
+      keyFieldSearchURL: null,
+    },
+    {
+      name: "tract_dois",
+      label: "Tract DOI",
+      seqNo: "11",
+      length: "1",
+      dataType: "char",
+      fieldKey: "tract_dois",
+      keyField: false,
+      isComment: false,
+      isCheckbox: true,
+      description: "Tract DOI Flag",
+      isSingleInput: false,
+      keyFieldParms: null,
+      modelGridData: null,
+      fieldKeyInStore: "tract_dois",
+      modelGridHeaders: null,
+      keyFieldSearchURL: null,
+    },
+    {
+      name: "tract_distribution",
+      label: "Tract Distribution",
+      seqNo: "12",
+      length: "1",
+      dataType: "char",
+      fieldKey: "tract_distribution",
+      keyField: false,
+      isComment: false,
+      isCheckbox: true,
+      description: "Tract Distribution Flag",
+      isSingleInput: false,
+      keyFieldParms: null,
+      modelGridData: null,
+      fieldKeyInStore: "tract_distribution",
+      modelGridHeaders: null,
+      keyFieldSearchURL: null,
+    },
+  ];
   return (
     <FilterBar
       style={{ maxHeight: "500px" }}
@@ -21,23 +404,26 @@ export const WCHeader = (props) => {
       hideToggleFiltersButton //(Hides "Hide Filter Bar" button) This is not working, don't know why
     >
       <FilterGroupItem label="Well Number">
-        <Input
-          icon={<Icon name="value-help" onClick={props.handleValueHelp} />}
-          placeholder=""
+        <QueryInput
+          label="Well Number"
+          queryHelperMeta={wellCompletionValueHelperMeta}
         />
       </FilterGroupItem>
+
       <FilterGroupItem label="Well Completion">
-        <Input
-          icon={<Icon name="value-help" onClick={props.handleValueHelp} />}
-          placeholder=""
+        <QueryInput
+          label="Well Completion"
+          queryHelperMeta={wellCompletionValueHelperMeta}
         />
       </FilterGroupItem>
-      <FilterGroupItem label="WC Name">
-        <Input
-          icon={<Icon name="value-help" onClick={props.handleValueHelp} />}
-          placeholder=""
+
+      <FilterGroupItem label="Well Name">
+        <QueryInput
+          label="Well Name"
+          queryHelperMeta={wellCompletionValueHelperMeta}
         />
       </FilterGroupItem>
+
       <FilterGroupItem label="Selection Date">
         <DatePicker placeholder="" />
       </FilterGroupItem>
@@ -112,9 +498,9 @@ export const WCHeader = (props) => {
         </Select>
       </FilterGroupItem>
       <FilterGroupItem label="Property">
-        <Input
-          icon={<Icon name="value-help" onClick={props.handleValueHelp} />}
-          placeholder=""
+        <QueryInput
+          label="Property"
+          queryHelperMeta={propertyValueHelperMeta}
         />
       </FilterGroupItem>
       <FilterGroupItem label="Rep Well Count">
