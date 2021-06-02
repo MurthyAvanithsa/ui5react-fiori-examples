@@ -56,7 +56,7 @@ export const WCValueHelperDialog = (props) => {
                 filterContainerWidth="13.125rem"
                 showFilterConfiguration={false}
                 showGoOnFB
-                // hideToggleFiltersButton
+                hideToggleFiltersButton
               >
                 {props.queryHelperMeta.map((fieldMeta) => (
                   <FilterGroupItem label={fieldMeta.label}>
