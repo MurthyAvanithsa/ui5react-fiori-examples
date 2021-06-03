@@ -224,7 +224,7 @@ export const WellCompletionTable = (props) => {
       }}
     >
       <Toolbar style={{ paddingTop: "28px", paddingBottom: "28px" }}>
-        <Title level="H4">Line Items (54)</Title>
+        <Title level="H4">Items (54)</Title>
         <ToolbarSeparator />
         <>
           <Title level="H4" className={classes.title}>
@@ -269,9 +269,6 @@ export const WellCompletionTable = (props) => {
         </>
         <ToolbarSpacer />
         <Button key="add">Open(2)</Button>
-        <Button key="delete" design="Transparent">
-          Edit
-        </Button>
         <Button
           key="settings"
           design="Transparent"

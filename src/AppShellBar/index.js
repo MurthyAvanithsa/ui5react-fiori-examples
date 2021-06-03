@@ -17,8 +17,7 @@ export const AppShellBar = (props) => {
             //   onClick={handleClick}
           />
         }
-        primaryTitle={"Production"}
-        secondaryTitle={"Well Completion"}
+        primaryTitle={"Well Completion"}
         startButton={<Button icon="paging" onClick={props.onMenuClick} />}
       >
         <ShellBarItem icon="employee" text="Profile" />

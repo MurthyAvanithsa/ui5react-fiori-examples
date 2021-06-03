@@ -948,7 +948,7 @@ export const WCHeader = (props) => {
       filterContainerWidth="13.125rem"
       search={<Input placeholder="Search" />}
       showFilterConfiguration
-      hideToggleFiltersButton //(Hides "Hide Filter Bar" button) This is not working, don't know why
+      hideToggleFiltersButton
     >
       <FilterGroupItem label="Well Number">
         <QueryInput
@@ -993,7 +993,7 @@ export const WCHeader = (props) => {
         <Input placeholder="" />
       </FilterGroupItem>
       <FilterGroupItem label="Company">
-        <MultiComboBox required>
+        <MultiComboBox required filter="Contains">
           <MultiComboBoxItem text="Google" />
           <MultiComboBoxItem text="TCS" />
           <MultiComboBoxItem text="Tecnics" />
@@ -1005,7 +1005,7 @@ export const WCHeader = (props) => {
         <Input placeholder="" />
       </FilterGroupItem>
       <FilterGroupItem label="County">
-        <MultiComboBox required>
+        <MultiComboBox required filter="Contains">
           <MultiComboBoxItem text="USA" />
           <MultiComboBoxItem text="India" />
           <MultiComboBoxItem text="China" />
@@ -1057,7 +1057,7 @@ export const WCHeader = (props) => {
         <Input placeholder="" />
       </FilterGroupItem>
       <FilterGroupItem label="State">
-        <MultiComboBox required>
+        <MultiComboBox required filter="Contains">
           <MultiComboBoxItem text="California" />
           <MultiComboBoxItem text="Texas" />
           <MultiComboBoxItem text="Florida" />

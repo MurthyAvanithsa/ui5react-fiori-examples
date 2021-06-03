@@ -46,17 +46,13 @@ export const WCValueHelperDialog = (props) => {
             <Bar endContent={<Button onClick={handleClose}>Close</Button>} />
           }
           header={<Bar startContent={<Title>Well Completion</Title>} />}
-          headerText="Dialog Header"
+          headerText="Well Completion"
         >
           <TabContainer
-            className=""
-            onTabSelect={function noRefCheck() {}}
-            slot=""
             style={{
               height: "80vh",
               width: "900px",
             }}
-            tooltip=""
           >
             <Tab selected text="Search and Select">
               <FilterBar

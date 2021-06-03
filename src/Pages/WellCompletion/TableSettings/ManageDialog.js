@@ -71,6 +71,7 @@ export const ManageDialog = (props) => {
                   <TableColumn demandPopin minWidth={600} popinText="Weight">
                     <Label>Created By</Label>
                   </TableColumn>
+                  <TableColumn></TableColumn>
                 </>
               }
               style={{ width: "900px" }}
@@ -115,6 +116,13 @@ export const ManageDialog = (props) => {
                 </TableCell>
                 <TableCell>
                   <Label>Crawford</Label>
+                </TableCell>
+                <TableCell>
+                  <Button icon="decline" design="Transparent" />
+                  {/* <Icon
+                    name="decline"
+                    style={{ color: ThemingParameters.sapButton_TextColor }}
+                  /> */}
                 </TableCell>
               </TableRow>
             </Table>
