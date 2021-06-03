@@ -94,7 +94,7 @@ export const WCValueHelperDialog = (props) => {
                 <Grid item xs={12}>
                   <div style={spacing.sapUiMediumMarginTop}>
                     <Title style={{ marginBottom: "8px", marginTop: "8px" }}>
-                      Items (123)
+                      Items (5)
                     </Title>
 
                     <Table

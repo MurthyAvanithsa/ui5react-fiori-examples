@@ -6,6 +6,7 @@ import { Home } from "./Pages/Home";
 import { AppSideNavigation } from "./AppSideNavigation";
 import { WellCompletion } from "./Pages/WellCompletion";
 import { Details } from "./Pages/WellCompletion/Details";
+import { Login } from "./Pages/Login";
 
 function App() {
   const [expand, setExpand] = React.useState(true);
@@ -20,10 +21,10 @@ function App() {
         <AppSideNavigation collapsed={expand} />
         <BrowserRouter>
           <Switch>
-            <Route exact path="/home" component={Home} />
+            <Route exact path="/" component={Login} />
             <Route exact path="/well-completion" component={WellCompletion} />
             <Route exact path="/well-completion/details" component={Details} />
-            <Redirect from="/" to="/well-completion" />
+            {/* <Redirect from="/" to="/well-completion" /> */}
           </Switch>
         </BrowserRouter>
       </FlexBox>
