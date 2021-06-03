@@ -19,7 +19,7 @@ import { ThemingParameters } from "@ui5/webcomponents-react-base/dist/ThemingPar
 import { SettingsDialog } from "../WellCompletion/TableSettings";
 import { SaveAsDialog } from "./TableSettings/SaveAsDialog";
 import { ManageDialog } from "./TableSettings/ManageDialog";
-
+import { useHistory } from "react-router-dom";
 const styles = {
   title: {
     color: ThemingParameters.sapButton_TextColor,
@@ -38,6 +38,7 @@ export const WellCompletionTable = (props) => {
   const saveAsRef = useRef();
   const manageRef = useRef();
   const classes = useStyles();
+  const history = useHistory();
 
   React.useEffect(() => {
     if (columnApi !== null) {
@@ -268,7 +269,14 @@ export const WellCompletionTable = (props) => {
           </Popover>
         </>
         <ToolbarSpacer />
-        <Button key="add">Open(2)</Button>
+        <Button
+          key="add"
+          onClick={() => {
+            history.push("/well-completion/details");
+          }}
+        >
+          Open(2)
+        </Button>
         <Button
           key="settings"
           design="Transparent"
